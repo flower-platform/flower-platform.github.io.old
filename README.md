@@ -1,2 +1,1 @@
-flower-platform.github.io
-=========================
+Flower Platform site page.

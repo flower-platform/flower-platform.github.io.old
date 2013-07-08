@@ -1,0 +1,76 @@
+---
+layout: page
+title: "Blog"
+tagline: "Flower Platform blog"
+description: ""
+group: navigation
+---
+{% include JB/setup %}
+
+<div class="row-fluid">
+	<div class="span8">
+		{% for post in paginator.posts %}
+			<h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+			<p class="author"> Posted on <span class="date">{{ post.date | date_to_long_string }}</span>
+			{% if post.category %}
+				in <span class="category">	<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ post.category }}-ref">
+		  {{ post.category }}</a></span>
+			{% endif %}
+			</p>
+			<div>
+			{% if post.content contains "<!-- more -->" %}
+				{{ post.content | split:"<!-- more -->" | first % }}
+			{% else %}
+				{{ post.content  }}
+			{% endif %}
+			</div>
+		
+			<div> 
+				<a href="{{ post.url }}">Read more...</a>
+			</div>	
+			
+			<hr/>
+		{% endfor %}
+
+		{% if paginator.total_pages > 1 %}
+		<!-- Pagination links -->
+		<div class="pagination">
+			<ul>
+				{% if paginator.previous_page %}
+				<li class="prev"><a href="{{ BASE_PATH }}/blog/{{ paginator.previous_page_path }}" title="Previous page">&larr;</a></li>	
+				{% else %}
+				<li class="prev disabled"><a title="Previous page">&larr;</a></li>
+				{% endif %}
+				{% for i in (1..paginator.total_pages) %}
+					{% assign page-path = "/blog" %}
+					{% if i > 1 %}{% assign page-path = page-path | append:"/page" | append:i %}{% endif %}
+				<li {% if paginator.page == i %}class="active"{% endif %}>
+					<a {% if paginator.page != i %}href="{{ page-path }}"{% endif %}>{{ i }}</a>
+				</li>
+				{% endfor %}
+				{% if paginator.next_page %}
+				<li class="next"><a href="{{ BASE_PATH }}/blog/{{ paginator.next_page_path }}" title="Next page">&rarr;</a></li>
+				{% else %}
+				<li class="next disabled"><a title="Next page">&rarr;</a></li>
+				{% endif %}
+			</ul>
+		</div>
+		{% endif %}
+		
+	</div>
+	<div class="span4">
+		<h4>Categories</h4>
+		<ul>
+			{% for cat in site.categories %}
+			<li><a href="categories.html#{{ cat | first }}-ref">{{ cat | first }}</a>
+			{% endfor %}
+		</ul>
+		<hr/>
+		<h4>Tag Cloud</h4>
+		<ul class="tag_cloud_box">
+			{% assign tags_list = site.tags %}
+			{% assign end-size = 35 %}
+			{% include misc/tag_cloud %}
+		</ul>
+	</div>
+</div>

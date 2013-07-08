@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ ASSET_PATH }}/css/docs.css" rel="stylesheet" type="text/css">
+
+	<link href="{{ ASSET_PATH }}/css/responsive-video.css" rel="stylesheet" type="text/css">
+	<link href="{{ ASSET_PATH }}/css/flower.css" rel="stylesheet" type="text/css">
+
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="{{ ASSET_PATH}}/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ BASE_PATH }}/assets/imgs/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ BASE_PATH }}/assets/imgs/apple-touch-icon.png">
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">-->
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ BASE_PATH }}/assets/imgs/apple-touch-icon.png">
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+	 <a href="https://github.com/flower-platform/main"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 2000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub" class="fork_github"/></a>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li {% if page.url == '/index.html' %}class="active"{% endif %}><a href="{{ HOME_PATH }}">Home</a></li>
+						{% assign pages_list = site.pages %}
+						{% assign group = 'navigation' %}
+						{% assign concept-tab = 'true' %}
+						{% include JB/pages_list %}
+						<li><a href="//www.flower-platform.com/forum/">Forum</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="container">
+{% if page.url != "/index.html" %}
+{% if page.concept-tab-id == null %}
+{% capture url_parts %} {{ page.url | remove: '/index.html' | replace:'/'," " }}{% endcapture %}
+{% else %}
+{% capture url_parts %} {{ page.url | replace:'/'," " }}{% endcapture %}
+{% endif %}
+{% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+{% assign previous="" %}
+<ul class="breadcrumb">
+ {% if num_parts == "0" or num_parts == "-1" %}
+  <li><a href="/">home</a> <span class="divider">/</span> </li>
+ {% else %}
+  <li><a href="/">home</a> <span class="divider">/</span> </li>
+
+  {% for unused in page.content limit:num_parts %}
+   {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+   {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+
+   <li><a href="{{previous}}">{{ first_word }}</a> <span class="divider">/</span> </li>
+
+   {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+  {% endfor %}
+ {% endif %}
+	<li class="active">{{ page.title }}</li>
+</ul>
+{% endif %}
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+
+	<footer class="footer" >
+		<div class="container">
+			<p>Find us on <a href="https://github.com/flower-platform/main" target="_blank">GitHub</a> | 
+			Follow us on <a href="http://www.twitter.com/flower_platform">Twitter</a> </p>
+			<p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+			with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+			and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+			</p>
+		</div>
+	</footer>
+
+	
+    <script src="{{ ASSET_PATH }}/js/jquery.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script> -->
+    <script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
+	<script src="{{ ASSET_PATH }}/js/application.js"></script>
+	{% if page.url == '/index.html' %}
+	<script type="text/javascript">
+		$('#flowerModal').on('show', function () {
+			$('div.modal-body').html('<iframe width="853" height="480" src="//www.youtube.com/embed/EEqh6ZIW3Bs?autoplay=1" frameborder="0" allowfullscreen="0"></iframe>'); 
+		});
+		$('#flowerModal').on('hide', function () {
+			$('div.modal-body').html('&nbsp;');  
+		});
+	</script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	{% endif %}
+
+    {% include JB/analytics %}
+  </body>
+</html>

@@ -1,0 +1,78 @@
+---
+layout: page
+hero: true
+---
+{% include JB/setup %}
+
+<div class="hero-unit">
+	<div class="modal hide" id="flowerModal" tabindex="-1">
+		 <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>Open Source Modelling Platform</h3>
+		</div>
+		<div class="modal-body flex-video widescreen" >
+		</div>
+	</div>
+	
+	<div class="row-fluid">
+		<div class="span6">
+	<h1>Flower Platform</h1>
+	<p>You can try what the Open Source Modelling Platform can do by clicking on the button bellow</p>
+	<p><a class="btn btn-primary btn-large" href="http://flower-dev-center.flower-platform.com:8081/flower-dev-center/" target="_blank">Launch Flower Platform &raquo;</a></p>
+		</div>
+		<div class="span6">
+			<div class="thumbnail" id="movie-image">
+				<img src="{{ BASE_PATH }}/assets/imgs/movie_screen.png" alt="Flower Platform Presentation"/>
+				<a href="//youtu.be/EEqh6ZIW3Bs" data-toggle="modal" data-target="#flowerModal" class="btn btn-primary">Play</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bs-docs-social">
+  <div class="container">
+    <ul class="bs-docs-social-buttons">
+      <li>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=flower-platform&repo=main&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      </li>
+      <li>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=flower-platform&repo=main&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+      </li>
+      <li class="follow-btn">
+        <a href="https://twitter.com/flower_platform" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @flower_platform</a>
+      </li>
+      <li class="tweet-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://flower-platform.com" data-count="horizontal" data-via="flower_platform" data-related="mdo:Flower - Open Source Modelling Platform">Tweet</a>
+      </li>
+	</ul>
+  </div>
+</div>
+
+{% comment %}
+<div class="row-fluid">
+	 <div class="span4">
+		 <div class="hero-unit">
+			 <h2>Blog</h2>
+			 <p>See what the team behing Flower Platform is up to.</p>
+			 <p><a class="btn" href="{{ BASE_PATH }}blog.html">Blog &raquo;</a></p>
+		 </div>
+	 </div><!-- .span4 -->
+
+	 <div class="span4">
+		<div class="hero-unit">
+			<h2>Features</h2>
+			<p>Things that you can do with the Flower Platform </p>
+			<p><a class="btn" href="{{ BASE_PATH }}features.html">Features &raquo;</a></p>
+		</div>
+	</div><!-- .span4 -->
+
+	<div class="span4">
+		<div class="hero-unit">
+			<h2>Tutorials</h2>
+			<p>How to use the Flower Platform. </p>
+			<p><a class="btn" href="{{ BASE_PATH }}tutorials.html">Tutorials &raquo;</a></p>
+		</div>
+	</div><!-- .span4 -->
+
+</div>
+{% endcomment %}

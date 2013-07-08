@@ -1,0 +1,43 @@
+{% comment %}<!--
+The tag_cloud is a listing helper for tags, which sets the font-size based on number
+of elements in that tag.
+Usage:
+  1) assign the 'tags_list' variable to a valid array of tags.
+  2) Optional parameter: max size of the text in pt (default 25) - end-size
+  3) Optional parameter: min size of the text in pt (default 8) - start-size
+  4) include misc/tag_cloud
+  example:
+    <ul>
+  	  {% assign categories_list = site.categories %}  
+  	  {% include misc/tag_cloud %}
+  	</ul>
+-->{% endcomment %}
+{% assign max-size = nil %}
+{% assign min-size = nil %}
+{% if start-size == nil %}
+	{% assign start-size = 8 %}
+{% endif %}
+{% if end-size == nil %}
+	{% assign end-size = 25 %}
+{% endif %}
+{% for tag in tags_list %}
+	{% assign tag-size = tag | last | size %}
+	{% if max-size == nil or max-size < tag-size %}
+		{% assign max-size = tag-size %}
+	{% endif %}
+	{% if min-size == nil or min-size > tag-size %}
+		{% assign min-size = tag-size %}
+	{% endif %}
+{% endfor %}
+{% assign tags-size = site.tags.size %}
+
+{% assign factor = end-size | minus: start-size | divided_by: max-size %}
+
+{% for tag in tags_list %}
+<li>
+	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first }}-ref"
+		style="font-size: {{ tag | last | size | times:factor | plus: start-size }}pt"> {{ tag | first }}</a>
+</li>
+{% endfor %}
+
+{% assign tags_list = nil %}
