@@ -38,15 +38,19 @@ body > .navbar .brand {
 	font-weight: bold;
 }
 
-a.center {
-	margin-left: 25%;
-	margin-right:25%;
-	margin-top: 25%;
-	margin-bottom: 25%;
+#movie-image {
+	position: relative;
 }
 
-#movie-image {
-	text-align: center;
+#movie-image a {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background: url(/assets/imgs/tutorials/rev_system/arrow_right.png) no-repeat center center;
 }
 
 .bs-docs-social {
