@@ -59,6 +59,10 @@ body > .navbar .brand {
   border-radius: 6px;
 }
 
+.hero-homepage {
+	margin-bottom: 0px;
+}
+
 .fork_github {
 	position: fixed; 
 	top: 0; 
