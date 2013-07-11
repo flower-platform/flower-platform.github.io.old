@@ -29,7 +29,7 @@ description: ""
 				<a href="{{ post.url }}">Read more...</a>
 			</div>	
 			
-			<hr/>
+			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>
 		{% endfor %}
 
 		{% if paginator.total_pages > 1 %}
@@ -65,7 +65,7 @@ description: ""
 			<li><a href="categories.html#{{ cat | first }}-ref">{{ cat | first }}</a>
 			{% endfor %}
 		</ul>
-		<hr/>
+		<hr class="soften post"/>
 		<h4>Tags</h4>
 		<ul class="tag_cloud_box">
 			{% assign tags_list = site.tags %}
