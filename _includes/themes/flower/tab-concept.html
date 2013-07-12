@@ -33,9 +33,6 @@
 					{% if group == node.group and tab-id == node.tab-id and node.title != null %}
 					<section id="{{ node.id }}">
 						{% assign nd_content = node.content %}
-						{% if nd_content contains "<!-- more -->" %}
-							{% capture nd_content %} {{ nd_content | split:"<!-- more -->" | first }} {% endcapture %}
-						{% endif %}
 						
 						{{ nd_content | markdownify }}
 						<a href="{{ node.url }}">more ...</a>
