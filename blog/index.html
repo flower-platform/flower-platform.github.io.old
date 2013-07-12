@@ -19,7 +19,7 @@ description: ""
 			</p>
 			<div>
 			{% if post.content contains "<!-- more -->" %}
-				{{ post.content | split:"<!-- more -->" | first % }}
+				{{ post.content | split:"<!-- more -->" | first }}
 			{% else %}
 				{{ post.content  }}
 			{% endif %}
