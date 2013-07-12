@@ -29,6 +29,7 @@
 					</ul>
 				</div>
 				<div class="span9">
+				{% assign remove_string = '{' | append: '%' | append: ' include JB/setup ' | append: '%'  | append: '}' %}
 				{% for node in pages_list %}
 					{% if group == node.group and tab-id == node.tab-id and node.title != null %}
 					<section id="{{ node.id }}">
