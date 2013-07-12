@@ -34,11 +34,10 @@
 					<section id="{{ node.id }}">
 						{% assign nd_content = node.content %}
 						{% if nd_content contains "<!-- more -->" %}
-							{{ nd_content | split:"<!-- more -->" | first}}
+							{{ nd_content | split:"<!-- more -->" | first }}
 						{% else %}
 							{{ nd_content }}
 						{% endif %}
-						{{ nd_content }}
 						<a href="{{ node.url }}">more ...</a>
 					</section>
 					{% endif %}
