@@ -35,7 +35,9 @@
 						{% assign nd_content = node.content %}
 						{% if nd_content contains "<!-- more -->" %}
 							{% capture nd_content %} {{ nd_content | split:"<!-- more -->" | first }} {% endcapture %}
-						{% endif %}						
+						{% endif %}
+						
+						{{ nd_content | markdownify }}
 						<a href="{{ node.url }}">more ...</a>
 					</section>
 					{% endif %}
