@@ -34,7 +34,7 @@
 					<section id="{{ node.id }}">
 						{% assign nd_content = node.content %}
 						{% if nd_content contains "<!-- more -->" %}
-							{{ nd_content | split:"<!-- more -->" | first }}
+							{{ nd_content | split:"<!-- more -->" | first | markdownify }}
 						{% else %}
 							{{ nd_content }}
 						{% endif %}
