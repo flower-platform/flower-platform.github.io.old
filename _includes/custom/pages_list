@@ -37,7 +37,12 @@
 						{% assign active = true %}
 					{% endif %}
 				{% endif %}
-				<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node.url}}"{%if active == true %} class="active" {% endif %}>{{title}}</a></li>
+				{% if node.concepts-home %}
+					{% assign node_url = node.url | remove:'/index.html' %}
+				{% else %}
+					{% assign node_url = node.url %}
+				{% endif %}
+				<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{{title}}</a></li>
 			{% endif %}
 			{% if concept-tab != null and node.concept-tab-id != null and concept-tab-assigned == false %}
 				{% assign concept-tab-assigned = true %}
