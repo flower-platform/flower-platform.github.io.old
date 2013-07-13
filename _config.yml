@@ -15,7 +15,7 @@ title : Flower Platform
 tagline: The Open Source Modelling Platform
 author :
   name : Flower Team
-  email : flower_platform_team@flower_platform.com
+  email : flower_platform_team@flower_platform.org
   github : flower-platform
   twitter : flower_platform
   feedburner : 
@@ -28,7 +28,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://flower-platform.github.io
+production_url : http://flower-platform.org
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
