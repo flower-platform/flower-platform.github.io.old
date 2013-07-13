@@ -2,4 +2,9 @@
 layout: default
 ---
 {% include JB/setup %}
+{% assign _page_title = page.title %}
+{% assign _page_tagline = page.tagline %}
+{% assign _page_id = page.id %}
+{% assign _page_tab-id = page.tab-id %}
+{% assign _page_order = page.order %}
 {% include themes/flower/page-subconcept.html %}

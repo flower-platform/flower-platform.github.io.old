@@ -1,7 +1,7 @@
 	<div class="page-header">
-		<h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+		<h1>{{ _page_title }} {% if _page_tagline %} <small>{{ _page_tagline }}</small>{% endif %}</h1>
 	</div>
-
+	
 	{% assign pages_list = site.pages %}
 
 	{% for node in pages_list %}
@@ -15,22 +15,21 @@
 	{% for node in pages_list %}
 		{% assign tab_name = node.url | remove: '/index.html' | split: '/' | last %}
 		{% if tab_name == next_tab and node.title != null %}
-			<li {% if node.id == page.id %}class="active"{% endif %}><a href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a></li>
+			<li {% if node.id == _page_id %}class="active"{% endif %}><a href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a></li>
 		{% endif %}
 	{% endfor %}
 	{% endfor %}
 	</ul>
 	
-	<!-- And now the content of the tab -->
 	{% assign group = 'subconcept' %}
-	{% assign parent-id = page.id %}
+	{% assign parent-id = _page_id %}
 	
 	<div class="tab-content">
-		<div class="tab-pane active" id="{{ page.tab-id }}">
+		<div class="tab-pane active" id="{{ _page_tab-id }}">
 			<div class="row-fluid">
 				<div class="span3 bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" >
-					{% assign page_order = page.order | split:' ' %}
+					{% assign page_order = _page_order | split:' ' %}
 					{% for next_node in page_order %}
 						{% for node in pages_list %}
 							{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
