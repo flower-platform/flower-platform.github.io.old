@@ -15,7 +15,7 @@
 	{% for node in pages_list %}
 		{% assign tab_name = node.url | remove: '/index.html' | split: '/' | last %}
 		{% if tab_name == next_tab and node.title != null %}
-			<li {% if node.id == _page_id %}class="active"{% endif %}><a href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a></li>
+			<li {% if node.id == _page_id %}class="active"{% endif %}><a href="{{ BASE_PATH }}{{ node.url | replace:'/index.html','' }}">{{ node.title }}</a></li>
 		{% endif %}
 	{% endfor %}
 	{% endfor %}

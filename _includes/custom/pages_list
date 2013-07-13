@@ -1,4 +1,10 @@
 {% assign concept-tab-assigned = false %}
+{% comment %} Search for the concept home (needs to be lit for every concept page {% endcomment %}
+{% for node in pages_list %}
+	{% if node.concepts-home == true %}
+		{% assign concepts-home = node %}
+	{% endif %}
+{% endfor %}
 {% for node in pages_list %}
 	{% if node.title != null %}
 	  {% if group == null or group == node.group %}
@@ -25,6 +31,11 @@
 				
 				{% if page_first_url_part == 'blog' and node_first_url_part == 'blog' %}
 					{% assign active = true %}
+				{% endif %}
+				{% if concepts-home.url == node.url and page_first_url_part != 'blog' %}
+					{% if page.id or page.parent-id or page.concepts-home %}
+						{% assign active = true %}
+					{% endif %}
 				{% endif %}
 				<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node.url}}"{%if active == true %} class="active" {% endif %}>{{title}}</a></li>
 			{% endif %}
