@@ -1,0 +1,38 @@
+{% comment %}
+Checks to see if the received folder contains a index.html with redirect and concepts-home, and return the correct url
+Usage:
+  1) assigne 'pages_list' variable to the pages where the search is to be done
+  2) assign the 'folder_name' variable to the folder name
+  3) include misc/redirect_if_needed
+    example:
+    <ul>
+  	  {% assign folder_name = 'concepts' %}
+  	  {% assign pages_list = sites.pages %}  
+  	  {% include misc/redirect_if_needed %}
+  	</ul>
+  	
+  	Returns:
+  		- variable 'redirect_needed' true/false
+  		- variable 'redirect_url' if 'redirect_needed' is true
+ {% endcomment %}
+ 
+ {% assign redirect_needed = false %}
+ {% assign redirect_url = null %}
+ {% for node in pages_list %}
+ 	{% assign node_last = node.url | remove: '/index.html' | split: '/' | last %}
+ 	{% if folder_name == node_last and node.redirect == true and node.concepts-home %}
+ 		{% assign first_tab = node.order | split: ' ' | first %}
+ 		{% for nd in pages_list %}
+ 			{% assign node_last_url = nd.url | remove: '/index.html' | split: '/' | last %}
+ 			{% if node_last_url == first_tab %}
+ 				{% assign redirect_needed = true %}
+ 				{% assign redirect_url = nd.url | remove: '/index.html' %}
+ 			{% endif %} 
+ 		{% endfor %}
+ 	{% endif %}
+ {% endfor %}
+ 
+ {% assign folder_name = null %}
+ {% assign pages_list = null %}
+ 
+ 
