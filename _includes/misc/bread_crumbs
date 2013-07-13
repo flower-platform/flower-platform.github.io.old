@@ -11,8 +11,19 @@ Usage:
   	  {% include misc/bread_crumbs %}
   	</ul>
 -->{% endcomment %}
-{% if current_page.url != "/index.html" %}
-{% capture url_parts %} {{ current_page.url | remove: '/index.html' | replace:'/'," " }}{% endcapture %}
+{% assign internal_page = current_page %}
+{% comment %}For concept-home page we need to use the first tab page for breadcrumbs{% endcomment %}
+{% if internal_page.concepts-home %}
+	{% assign current_tab = internal_page.order | split: ' ' | first %}
+	{% for node in site.pages %}
+		{% assign tab_name = node.url | remove: '/index.html' | split: '/' | last %}
+		{% if tab_name == current_tab %}
+			{% assign internal_page = node %}
+		{% endif %}
+	{% endfor %} 
+{% endif %}
+{% if internal_page.url != "/index.html" %}
+{% capture url_parts %} {{ internal_page.url | remove: '/index.html' | replace:'/'," " }}{% endcapture %}
 {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
 {% assign previous="" %}
 <ul {% if bread_crumbs_class %}class="{{ bread_crumbs_class }}"{% endif %}>
@@ -34,7 +45,7 @@ Usage:
 		{% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
   {% endfor %}
  {% endif %}
-	<li class="active">{{ current_page.title }}</li>
+	<li class="active">{{ internal_page.title }}</li>
 </ul>
 {% endif %}
 {% assign current_page = nil %}
