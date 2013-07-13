@@ -11,12 +11,19 @@ Usage:
   	  {% include misc/bread_crumbs %}
   	</ul>
 -->{% endcomment %}
-{% if current_page.url != "/index.html" %}
-{% if current_page.concept-tab-id == null %}
-{% capture url_parts %} {{ current_page.url | remove: '/index.html' | replace:'/'," " }}{% endcapture %}
-{% else %}
-{% capture url_parts %} {{ current_page.url | replace:'/'," " }}{% endcapture %}
+{% assign internal_page = current_page %}
+{% comment %}For concept-home page we need to use the first tab page for breadcrumbs{% endcomment %}
+{% if internal_page.concepts-home %}
+	{% assign current_tab = internal_page.order | split: ' ' | first %}
+	{% for node in site.pages %}
+		{% assign tab_name = node.url | remove: '/index.html' | split: '/' | last %}
+		{% if tab_name == current_tab %}
+			{% assign internal_page = node %}
+		{% endif %}
+	{% endfor %} 
 {% endif %}
+{% if internal_page.url != "/index.html" %}
+{% capture url_parts %} {{ internal_page.url | remove: '/index.html' | replace:'/'," " }}{% endcapture %}
 {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
 {% assign previous="" %}
 <ul {% if bread_crumbs_class %}class="{{ bread_crumbs_class }}"{% endif %}>
@@ -24,17 +31,21 @@ Usage:
   <li><a href="/">home</a> <span class="divider">/</span> </li>
  {% else %}
   <li><a href="/">home</a> <span class="divider">/</span> </li>
-
-  {% for unused in current_page.content limit:num_parts %}
-   {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
-   {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+	{% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+	{% if first_word == 'blog' %}
+		{% assign num_parts = '1' %}
+	{% endif %}
+	{% assign for_test = "a b c d e f g h i j k l m n o p q r s t" | split:' ' %}
+  	{% for unused in for_test limit:num_parts %}
+	   {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+	   {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
 
    <li><a href="{{previous}}">{{ first_word }}</a> <span class="divider">/</span> </li>
 
-   {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+		{% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
   {% endfor %}
  {% endif %}
-	<li class="active">{{ current_page.title }}</li>
+	<li class="active">{{ internal_page.title }}</li>
 </ul>
 {% endif %}
 {% assign current_page = nil %}

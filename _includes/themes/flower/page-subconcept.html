@@ -1,0 +1,64 @@
+	<div class="page-header">
+		<h1>{{ _page_title }} {% if _page_tagline %} <small>{{ _page_tagline }}</small>{% endif %}</h1>
+	</div>
+	
+	{% assign pages_list = site.pages %}
+
+	{% for node in pages_list %}
+		{% if node.concepts-home == true %}
+			{% assign concepts_home = node %}
+		{% endif %}
+	{% endfor %}
+	<ul class="nav nav-tabs">
+	{% assign tab_order = concepts_home.order | split:' ' %}
+	{% for next_tab in tab_order %}
+	{% for node in pages_list %}
+		{% assign tab_name = node.url | remove: '/index.html' | split: '/' | last %}
+		{% if tab_name == next_tab and node.title != null %}
+			<li {% if node.id == _page_id %}class="active"{% endif %}><a href="{{ BASE_PATH }}{{ node.url | replace:'/index.html','' }}">{{ node.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+	{% endfor %}
+	</ul>
+	
+	{% assign group = 'subconcept' %}
+	{% assign parent-id = _page_id %}
+	
+	<div class="tab-content">
+		<div class="tab-pane active" id="{{ _page_tab-id }}">
+			<div class="row-fluid">
+				<div class="span3 bs-docs-sidebar">
+					<ul class="nav nav-list bs-docs-sidenav" >
+					{% assign page_order = _page_order | split:' ' %}
+					{% for next_node in page_order %}
+						{% for node in pages_list %}
+							{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
+							{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
+						<li><a href="#{{ node.title | replace:' ','' }}"><i class="icon-chevron-right"></i> {{ node.title }}</a></li>
+							{% endif %}
+						{% endfor %}
+					{% endfor %}					
+					</ul>
+				</div>
+				<div class="span9">
+				{% assign remove_string = '{' | append: '%' | append: ' include JB/setup ' | append: '%'  | append: '}' %}
+				{% for next_node in page_order %}
+					{% for node in pages_list %}
+						{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
+						{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
+						<section id="{{ node.title | replace:' ','' }}">
+							{% assign nd_content = node.content %}
+							{% if nd_content contains "<!-- more -->" %}
+								{{ nd_content | split:"<!-- more -->" | first | remove: remove_string | markdownify }}
+							{% else %}
+								{{ nd_content | remove: remove_string | markdownify }}
+							{% endif %}
+							<a href="{{ node.url }}">more ...</a>
+						</section>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
