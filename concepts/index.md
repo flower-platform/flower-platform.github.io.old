@@ -1,9 +1,10 @@
 ---
-layout: tab-concept
+layout: page
+title: "Concepts + Discussions = Features"
 tagline: "Flower Platform"
-concept-tab-id: concept1
-title: "Concept1"
-navigation-title: "Concepts"
 group: navigation
+concepts-home: true
+order: "smart-structure-diagrams sharing-and-collaboration"
+redirect: true
 ---
 {% include JB/setup %}
