@@ -39,8 +39,14 @@ Usage:
   	{% for unused in for_test limit:num_parts %}
 	   {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
 	   {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
-
-   <li><a href="{{previous}}">{{ first_word }}</a> <span class="divider">/</span> </li>
+	{% capture a_href %}{{previous}}{% endcapture %}
+	{% assign pages_list = site.pages %}
+	{% assign folder_name = first_word %}
+	{% include misc/redirect_if_needed %}
+	{% if redirect_needed == true %}
+		{% capture a_href %}{{redirect_url}}{% endcapture %}
+	{% endif %}
+   <li><a href="{{a_href}}">{{ first_word }}</a> <span class="divider">/</span> </li>
 
 		{% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
   {% endfor %}

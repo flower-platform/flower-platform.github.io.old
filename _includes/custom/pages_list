@@ -5,6 +5,16 @@
 		{% assign concepts-home = node %}
 	{% endif %}
 {% endfor %}
+{% comment %} Find the first tab from concept home so that we place the url instead of concepts-home {% endcomment %}
+{% if concepts-home %}
+	{% assign first_tab_name = concepts-home.order | split:' ' | first %}
+	{% for node in pages_list %}
+		{% assign current_node_name = node.url | remove: '/index.html' | split:'/' | last %}
+		{% if current_node_name == first_tab_name and node.id %}
+			{% assign concept_redirect_url = node.url %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
 {% for node in pages_list %}
 	{% if node.title != null %}
 	  {% if group == null or group == node.group %}
@@ -38,7 +48,7 @@
 					{% endif %}
 				{% endif %}
 				{% if node.concepts-home %}
-					{% assign node_url = node.url | remove:'/index.html' %}
+					{% assign node_url = concept_redirect_url | remove: '/index.html' %}
 				{% else %}
 					{% assign node_url = node.url %}
 				{% endif %}
