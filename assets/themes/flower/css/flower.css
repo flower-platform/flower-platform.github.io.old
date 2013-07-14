@@ -399,3 +399,8 @@ hr.post {
     display: none;
   }
 }
+
+.label-in-progress,.badge-in-progress{background-color:#E6E635;}
+.label-ideas,.badge-ideas{background-color:#3a87ad;}
+.label-implemented,.badge-implemented{background-color:#468847;}
+.label-planned,.badge-planned{background-color:#f89406;}

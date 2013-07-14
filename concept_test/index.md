@@ -1,9 +1,9 @@
 ---
 layout: page-concept
-title: "Concepts"
+title: "Concepts + Discussions = Features"
 tagline: "Flower Platform"
-#group: navigation
+group: navigation
 concepts-home: true
-order: "concept2 concept1"
+order: "smart-structure-diagrams sharing-and-collaboration"
 ---
 {% include JB/setup %}
