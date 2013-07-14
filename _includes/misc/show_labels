@@ -1,0 +1,38 @@
+{% comment %}<!--
+The show_labels will show the labels in the 'labels' variable.
+It should already exist a class for label-code, because that is what will be generated.
+Usage:
+  1) assign the 'page_labels' variable to the labels array
+  2) assign the address for rate and discuss (might be in the same page or not). The # will be added automatically
+  to disqus_thread
+  3) include misc/show_labels
+  example:
+    <ul>
+  	  {% assign page_labels = page.labels %}
+  	  {% assign rate_url = node.url %}
+  	  {% include misc/show_labels %}
+  	</ul>
+-->{% endcomment %}
+{% if page_labels %}
+    <ul class="breadcrumb rate_button">
+	    <li class="active">Labels:</li>
+	    {% for label_code in page_labels %}
+	    <li><span class="label label-{{ label_code }}">{% case label_code %}
+	    {% when 'implemented' %} 
+	    Implemented 
+	    {% when 'in-progress' %} 
+	    Work in Progress 
+	    {% when 'ideas' %} 
+	    Ideas for Improvements
+	    {% when 'planned' %}
+	    Planned 
+	    {% endcase %}</span></li>
+	    {% endfor %}
+	    {% if rate_url %}
+	    <li class="pull-right"><a class="btn btn-success" href="{{ rate_url }}#disqus_thread">Rate &amp; Discuss This Concept!</a></li>
+	    {% endif %}
+	 </ul>
+	 <hr class="soften concepts-labels"/>
+{% endif %}
+{% assign show_labels = nil %}
+{% assign labels_class = nil %}

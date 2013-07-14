@@ -19,6 +19,14 @@ body > .navbar {
   font-size: 13px;
 }
 
+ul.rate_button {
+	line-height: 28px;
+}
+
+.page-header-labels {
+	margin-bottom: 10px;
+}
+
 /* Change the brand */
 body > .navbar .brand {
   padding-right: 0;
@@ -104,6 +112,11 @@ hr.post {
 hr.concepts {
 	margin-top: 30px;
 	margin-bottom: 0px;
+}
+
+hr.concepts-labels {
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
 /* Social proof buttons from GitHub & Twitter */

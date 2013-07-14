@@ -48,6 +48,9 @@
 						{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
 						<section id="{{ node.title | replace:' ','' }}">
 							<a href="{{node.url}}"><h1>{{node.title}}</h1></a>
+							{% assign page_labels = node.labels %}
+							{% assign rate_url = node.url %}
+							{% include misc/show_labels %}
 							{% assign nd_content = node.content %}
 							{% if nd_content contains "<!-- more -->" %}
 								{{ nd_content | split:"<!-- more -->" | first | remove: remove_string | markdownify }}

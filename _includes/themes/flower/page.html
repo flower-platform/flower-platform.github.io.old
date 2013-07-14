@@ -1,8 +1,11 @@
 {% if page.title %}
-<div class="page-header">
+<div class="page-header {% if page.labels %}page-header-labels{% endif %}">
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
 {% endif %}
+{% assign page_labels = page.labels %}
+{% assign rate_url = '' %}
+{% include misc/show_labels %}
 
 <div class="row-fluid">
   <div class="span12">

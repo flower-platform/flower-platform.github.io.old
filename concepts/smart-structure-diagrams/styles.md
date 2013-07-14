@@ -10,6 +10,7 @@ comments: true
 # get the disqus identifier from the original page (something like var disqus_identifier = 'ident';),
 # uncomment the following line and replace the text between "" with ident
 #comments_identifier: "identifier"
+labels: [implemented, in-progress, ideas]
 ---
 {% include JB/setup %}
 
