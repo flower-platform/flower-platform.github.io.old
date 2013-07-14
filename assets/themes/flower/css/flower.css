@@ -101,6 +101,11 @@ hr.post {
 	margin-bottom: 30px;
 }
 
+hr.concepts {
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
 /* Social proof buttons from GitHub & Twitter */
 .bs-docs-social {
   padding: 15px 0;
