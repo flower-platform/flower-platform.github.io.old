@@ -14,21 +14,26 @@ Usage:
   	Returns:
   		- variable 'redirect_needed' true/false
   		- variable 'redirect_url' if 'redirect_needed' is true
+  		- variable 'folder_title' = title for the found folder_name
  {% endcomment %}
  
  {% assign redirect_needed = false %}
  {% assign redirect_url = null %}
+ {% assign folder_title = null %}
  {% for node in pages_list %}
  	{% assign node_last = node.url | remove: '/index.html' | split: '/' | last %}
- 	{% if folder_name == node_last and node.redirect == true and node.concepts-home %}
- 		{% assign first_tab = node.order | split: ' ' | first %}
- 		{% for nd in pages_list %}
- 			{% assign node_last_url = nd.url | remove: '/index.html' | split: '/' | last %}
- 			{% if node_last_url == first_tab %}
- 				{% assign redirect_needed = true %}
- 				{% assign redirect_url = nd.url | remove: '/index.html' %}
- 			{% endif %} 
- 		{% endfor %}
+ 	{% if folder_name == node_last %}
+ 		{% assign folder_title = node.title %}
+		{% if node.redirect == true and node.concepts-home %}
+		{% assign first_tab = node.order | split: ' ' | first %}
+		{% for nd in pages_list %}
+			{% assign node_last_url = nd.url | remove: '/index.html' | split: '/' | last %}
+			{% if node_last_url == first_tab %}
+				{% assign redirect_needed = true %}
+				{% assign redirect_url = nd.url | remove: '/index.html' %}
+			{% endif %} 
+		{% endfor %}
+		{% endif %}
  	{% endif %}
  {% endfor %}
  
