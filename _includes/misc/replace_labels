@@ -1,0 +1,21 @@
+{% comment %}
+	Searches for code like <!-- label:label-code --> and replaces it with <span class="label label-label-code">label name</span>
+	Based on label definitions from labels_definition.
+	
+	Parameters:
+		- nd-content; the content where the replace will happen
+		- return: the replace happens on the spot in nd-content
+		Example:
+		  	  {% assign nd_content = page.content %}
+  	  		  {% include misc/replace_labels %}
+  	  		  
+{% endcomment %}
+{% include misc/labels_definition %}
+
+{% for label in labels_code %}
+	{% capture current_marker %}<!-- label:{{ label }} -->{% endcapture %}
+	{% if nd_content contains current_marker %}
+		{% capture replace_code %}<span class="label label-{{ label }}">{{ labels_name[forloop.index0] }}</span>{% endcapture %}
+		{% assign nd_content = nd_content | replace:current_marker,replace_code %}
+	{% endif %}
+{% endfor %}

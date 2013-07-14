@@ -7,26 +7,16 @@ Usage:
   to disqus_thread
   3) include misc/show_labels
   example:
-    <ul>
   	  {% assign page_labels = page.labels %}
   	  {% assign rate_url = node.url %}
   	  {% include misc/show_labels %}
-  	</ul>
 -->{% endcomment %}
+{% include misc/labels_definition %}
 {% if page_labels %}
     <ul class="breadcrumb rate_button">
 	    <li class="active">Labels:</li>
 	    {% for label_code in page_labels %}
-	    <li><span class="label label-{{ label_code }}">{% case label_code %}
-	    {% when 'implemented' %} 
-	    Implemented 
-	    {% when 'in-progress' %} 
-	    Work in Progress 
-	    {% when 'ideas' %} 
-	    Ideas for Improvements
-	    {% when 'planned' %}
-	    Planned 
-	    {% endcase %}</span></li>
+	    <li><span class="label label-{{ label_code }}">{% for label in labels_code %}{% if label_code == label %}{{ labels_name[forloop.index0] }}{% endif %}{% endfor %}</span></li>
 	    {% endfor %}
 	    {% if rate_url %}
 	    <li class="pull-right"><a class="btn btn-success" href="{{ rate_url }}#disqus_thread">Rate &amp; Discuss This Concept!</a></li>

@@ -1,0 +1,5 @@
+{% assign lbls_code='implemented|in-progress|ideas|planned' %}
+{% assign labels_code = lbls_code | split: '|' %}
+
+{% assign lbls_name='Implemented|Work in Progress|Ideas for Improvements|Planned' %}
+{% assign labels_name = lbls_name | split: '|' %}

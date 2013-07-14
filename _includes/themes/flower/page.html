@@ -9,7 +9,9 @@
 
 <div class="row-fluid">
   <div class="span12">
-    {{ content }}
+  	{% assign nd_content = content %}
+  	{% include misc/replace_labels %}  	
+    {{ nd_content }}
   </div>
 </div>
 {% if page.comments %}

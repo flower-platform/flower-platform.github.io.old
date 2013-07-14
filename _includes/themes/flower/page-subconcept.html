@@ -52,6 +52,7 @@
 							{% assign rate_url = node.url %}
 							{% include misc/show_labels %}
 							{% assign nd_content = node.content %}
+							{% include misc/replace_labels %}
 							{% if nd_content contains "<!-- more -->" %}
 								{{ nd_content | split:"<!-- more -->" | first | remove: remove_string | markdownify }}
 							{% else %}
