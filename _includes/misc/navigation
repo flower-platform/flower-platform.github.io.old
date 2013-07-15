@@ -1,0 +1,69 @@
+{% comment %}
+	Creates the navigation list by only showing the pages from defs/order_navigation in the order given there.
+	Custom coding has been done for home and forum (which points to home, and forum which points to //www.flower-platform.com/forum)
+	Parameters:
+		- pages_list - where to look for the correct pages
+		- current_page - the current page that is used to know when to mark segments as active
+	Usage:
+		{% assign pages_list = site.pages %}
+		{% assign current_page = page %}
+		{% include misc/navigation %}
+{% endcomment %}
+{% include defs/order_navigation %}
+
+{% assign navigation_href = nil %}{% assign navigation_titles = nil %}{% assign navigation_file = nil %}{% assign concepts_node = nil %}
+
+{% for node in pages_list %}
+	{% assign file = node.url | remove: '/index.html' | split: '/' | last %}
+	{% if navigation_order contains file %}
+		{% assign navigation_href = navigation_href | append:'|' | append:node.url %}
+		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
+		{% assign navigation_file = navigation_file | append:'|' | append:file %}
+	{% endif %}
+	{% if node.concepts-home == true %}{% assign concepts_node = node %}{% endif %}
+{% endfor %}
+{% if concepts_node %}
+	{% assign concepts_file = concepts_node.url | remove: '/index.html' | split: '/' | last %}
+	{% assign concepts_first = concepts_node.order | split: ' ' | first %}
+	{% for node in pages_list %}
+		{% assign node_first = node.url | remove: '/index.html' | split: '/' | last %}
+		{% if node_first == concepts_first %}
+			{% assign concepts_url = node.url %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+{% assign navigation_href_arr = navigation_href | split: '|' %}
+{% assign navigation_titles_arr = navigation_titles | split: '|' %}
+{% assign navigation_file_arr = navigation_file | split: '|' %}
+
+{% for node_order in navigation_order_arr %}
+	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}
+	{% if node_order == 'home' %}
+		{% assign node_url = HOME_PATH %}{% assign title = 'Home' %}
+		{% if current_page.url == '/index.html' %}{% assign active = true %}{% endif %}
+	{% elsif node_order == 'forum' %}
+		{% assign active = false %}{% assign node_url = '//www.flower-platform.com/forum/' %}{% assign title = 'Forum' %}
+	{% else %}
+		{% for node in navigation_file_arr %}
+			{% if node == node_order %}
+				{% assign node_url = navigation_href_arr[forloop.index0] %}{% assign title = navigation_titles_arr[forloop.index0] %}
+				{% if node_url == current_page.url %}{% assign active=true %}{% endif %}
+				{% if node == 'blog' %}
+					{% if current_page.url contains '/blog/' %}{% assign active = true %}{% endif %}
+				{% endif %}
+				{% if node == concepts_file  %}{% unless current_page.url contains '/blog/' %}
+					{% assign node_url = concepts_url %}
+					{% if current_page.id or current_page.parent-id or current_page.concepts-home %}
+						{% assign active = true %}
+					{% endif %}
+				{% endunless %}{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+	{% if title %}
+	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{{title}}</a></li>
+	{% endif %}
+{% endfor %}
+
+{% assign pages_list = nil %}
+{% assign current_page = nil %}

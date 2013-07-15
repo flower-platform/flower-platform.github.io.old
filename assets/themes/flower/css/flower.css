@@ -19,6 +19,14 @@ body > .navbar {
   font-size: 13px;
 }
 
+ul.rate_button {
+	line-height: 28px;
+}
+
+.page-header-labels {
+	margin-bottom: 10px;
+}
+
 /* Change the brand */
 body > .navbar .brand {
   padding-right: 0;
@@ -99,6 +107,16 @@ hr.soften {
 hr.post {
 	margin-top: 20px;
 	margin-bottom: 30px;
+}
+
+hr.concepts {
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+hr.concepts-labels {
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
 /* Social proof buttons from GitHub & Twitter */
@@ -267,6 +285,24 @@ hr.post {
 	font-weight: bold;
 }
 
+body .fb-like {
+	display: inline;	
+}
+
+#fb-root {
+	display: inline;
+}
+
+.oscon {
+	width: 100%;
+	padding-top: 40px;
+}
+
+.oscon img {
+	display: block;
+	margin: auto;
+}
+
 /* Responsive */
 
 /* Desktop large */
@@ -277,6 +313,18 @@ hr.post {
   .bs-docs-sidenav > li > a {
     width: 230px \9; /* Override the previous IE8-9 hack */
   }
+
+  .modal {
+  	width: 800px;
+  	margin-left: -400px;
+  }
+}
+
+@media (min-width: 981px) {
+	.modal {
+		width: 800px;
+		margin-left: -400px;
+	}
 }
 
 /* Desktop
@@ -328,6 +376,10 @@ hr.post {
     top: 0;
   }
 
+	.modal {
+		width: 680px;
+		margin-left: -340px;
+	}
 }
 
 /* Tablet
