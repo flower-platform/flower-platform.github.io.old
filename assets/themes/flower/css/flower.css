@@ -285,6 +285,14 @@ hr.concepts-labels {
 	font-weight: bold;
 }
 
+body .fb-like {
+	display: inline;	
+}
+
+#fb-root {
+	display: inline;
+}
+
 /* Responsive */
 
 /* Desktop large */
