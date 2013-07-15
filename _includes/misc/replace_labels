@@ -10,7 +10,7 @@
   	  		  {% include misc/replace_labels %}
   	  		  
 {% endcomment %}
-{% include misc/labels_definition %}
+{% include defs/labels_definition %}
 
 {% for label in labels_code %}
 	{% capture current_marker %}<!-- label:{{ label }} -->{% endcapture %}

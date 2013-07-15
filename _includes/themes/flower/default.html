@@ -68,12 +68,9 @@ window.location = "{{redirect_url}}"
 				<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li {% if page.url == '/index.html' %}class="active"{% endif %}><a href="{{ HOME_PATH }}">Home</a></li>
 						{% assign pages_list = site.pages %}
-						{% assign group = 'navigation' %}
-						{% assign concept-tab = 'true' %}
-						{% include JB/pages_list %}
-						<li><a href="//www.flower-platform.com/forum/">Forum</a></li>
+						{% assign current_page = page %}
+						{% include misc/navigation %}
 					</ul>
 				</div>
 			</div>

@@ -11,7 +11,7 @@ Usage:
   	  {% assign rate_url = node.url %}
   	  {% include misc/show_labels %}
 -->{% endcomment %}
-{% include misc/labels_definition %}
+{% include defs/labels_definition %}
 {% if page_labels %}
     <ul class="breadcrumb rate_button">
 	    <li class="active">Labels:</li>
