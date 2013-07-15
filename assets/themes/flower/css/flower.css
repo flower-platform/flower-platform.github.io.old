@@ -293,6 +293,16 @@ body .fb-like {
 	display: inline;
 }
 
+.oscon {
+	width: 100%;
+	padding-top: 40px;
+}
+
+.oscon img {
+	display: block;
+	margin: auto;
+}
+
 /* Responsive */
 
 /* Desktop large */
