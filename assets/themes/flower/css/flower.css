@@ -295,6 +295,18 @@ hr.concepts-labels {
   .bs-docs-sidenav > li > a {
     width: 230px \9; /* Override the previous IE8-9 hack */
   }
+
+  .modal {
+  	width: 800px;
+  	margin-left: -400px;
+  }
+}
+
+@media (min-width: 981px) {
+	.modal {
+		width: 800px;
+		margin-left: -400px;
+	}
 }
 
 /* Desktop
@@ -346,6 +358,10 @@ hr.concepts-labels {
     top: 0;
   }
 
+	.modal {
+		width: 680px;
+		margin-left: -340px;
+	}
 }
 
 /* Tablet
