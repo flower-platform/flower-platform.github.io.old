@@ -14,7 +14,7 @@ Usage:
 {% include defs/labels_definition %}
 {% if page_labels %}
     <ul class="breadcrumb rate_button">
-	    <li class="active"><i class="icon-tags">&nbsp;</i> Labels</li>
+	    <li class="active"><i class="icon-tags">&nbsp;</i> Labels:</li>
 	    {% for label_code in page_labels %}
 	    <li><span class="label label-{{ label_code }}">{% for label in labels_code %}{% if label_code == label %}{{ labels_name[forloop.index0] }}{% endif %}{% endfor %}</span></li>
 	    {% endfor %}
