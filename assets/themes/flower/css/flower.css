@@ -51,7 +51,7 @@ body > .navbar .brand:hover {
 	top: 0; 
 	right: 0; 
 	border: 0; 
-	z-index: 2000;
+	z-index: 1040;
 }
 
 /* make the navbar/btn-navbar take the github fork image into account */
