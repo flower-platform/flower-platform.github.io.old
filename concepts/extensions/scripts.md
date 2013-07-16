@@ -4,6 +4,7 @@ group: subconcept
 parent-id: extensions
 
 title: "Scripts"
+labels: [ideas]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -13,7 +14,6 @@ comments: true
 ---
 {% include JB/setup %}
 
-`idea`
 Flower Platform will allow users to upload their own scripts.
 
 <div class="alert alert-info">

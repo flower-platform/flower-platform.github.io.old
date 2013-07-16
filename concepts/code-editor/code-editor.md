@@ -4,6 +4,7 @@ group: subconcept
 parent-id: code-editor
 
 title: "Basic Editor Operations"
+labels: [implemented, ideas]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -13,8 +14,6 @@ comments: true
 ---
 {% include JB/setup %}
 
-`implemented, idea`
-
 <img class="img-polaroid" style="float:right" src="code-editor.png"/>
 
 When working with Flower Platform from a web browser or mobile, we may need to access the code:
@@ -23,8 +22,7 @@ When working with Flower Platform from a web browser or mobile, we may need to a
 
 Flower Platform supports basic editor operation: create file, open file, save file.
 
-`idea`
-
+<!-- label:ideas -->
 It would be nice to integrate an existing web based editor. E.g. :
 * <http://brackets.io/>
 * <http://ajaxorg.github.io/ace/>

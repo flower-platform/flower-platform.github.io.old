@@ -4,6 +4,7 @@ group: subconcept
 parent-id: extensions
 
 title: "Plugins"
+labels: [implemented]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`implemented`
 
 Flower Platform is based on Eclipse and OSGi (i.e. Equinox implementation from Eclipse). All the logic of Flower Platform is organized in plugins that declare extension points to allow other plugins to register and contribute with custom logic.
 

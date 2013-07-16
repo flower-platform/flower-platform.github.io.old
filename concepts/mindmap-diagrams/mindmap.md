@@ -4,6 +4,7 @@ group: subconcept
 parent-id: mindmap-diagrams
 
 title: "Classic Mindmap"
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`in progress`
 
 Flower Platform will support mindmap diagrams. 
 

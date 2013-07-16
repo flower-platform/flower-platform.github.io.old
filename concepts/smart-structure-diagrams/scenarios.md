@@ -4,6 +4,7 @@ group: subconcept
 parent-id: smart-structure-diagrams
 
 title: "Scenarios"
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,17 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-<div>
-
-	<h1>Scenarios</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-in-progress">Work in Progress</span></li>
-	    <a class="btn btn-success pull-right">Rate &amp; Discuss This Concept!</a>
-    </ul>
-    <hr/>
-</div>
 
 The **first purpose** of a scenario is to be able to see on a diagram the flow / ordered interactions between the code (e.g. calls to methods, access to attributes). It's like **combining** an **UML class diagram** and an **UML sequence diagram** into a single diagram (or a **stack trace tree** as we see it in the debugger window). 
 

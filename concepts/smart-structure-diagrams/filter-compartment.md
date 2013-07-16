@@ -4,6 +4,7 @@ group: subconcept
 parent-id: smart-structure-diagrams
 
 title: "Filter Compartment Items"
+labels: [implemented]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -13,17 +14,7 @@ comments: true
 ---
 {% include JB/setup %}
 
-<div>
-
-	<h1>Filter Compartment Items</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-implemented">Implemented</span></li>
-    </ul>
-    <hr/>
-	<img class="img-polaroid" style="float:right" src="smart-structure-diagrams-filter-compartment1.png"/>
-</div>
-
+<img class="img-polaroid" style="float:right" src="smart-structure-diagrams-filter-compartment1.png"/>
 The child elements (e.g. attributes, methods) of elements from diagrams (e.g. class) can be filtered. A "..." is shown at the bottom of the compartment.
 
 ## Strategy for New Elements

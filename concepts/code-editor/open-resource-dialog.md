@@ -4,6 +4,7 @@ group: subconcept
 parent-id: code-editor
 
 title: "Open Resource Dialog"
+labels: [implemented]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`implemented`
 
 Flower Platform gives you the possibility to open quickly any resource by pressing the CTRL + SHIFT + R (or menu → Navigate → Open Resource…).
 

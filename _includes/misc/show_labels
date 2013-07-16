@@ -22,7 +22,6 @@ Usage:
 	    <li class="pull-right"><a class="btn btn-success" href="{{ rate_url }}#disqus_thread">Rate &amp; Discuss This Concept!</a></li>
 	    {% endif %}
 	 </ul>
-	 <hr class="soften concepts-labels"/>
 {% endif %}
 {% assign show_labels = nil %}
 {% assign labels_class = nil %}

@@ -4,6 +4,7 @@ group: subconcept
 parent-id: smart-doc
 
 title: "1. Quick Demo on Live Data"
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`in progress`
 
 The **purpose of Smart Doc** is to get rid of the documentation for Flower Platform that would be published in a wiki or on a web site.
 

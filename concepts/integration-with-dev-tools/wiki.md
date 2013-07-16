@@ -4,6 +4,7 @@ group: subconcept
 parent-id: integration-with-dev-tools
 
 title: "Wiki"
+labels: [in-progress, ideas]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -13,17 +14,15 @@ comments: true
 ---
 {% include JB/setup %}
 
-`in progress`
-
 Flower Platform (server) will integrate with the following wiki systems:
 
-* GitHub wiki with MarkDown syntax
-* DokuWiki
+* [GitHub wiki] (https://github.com/features/projects/wikis) with MarkDown syntax
+* [DokuWiki] (http://dokuwiki.org/)
 
 The data from wiki will be shown on [mindmap diagrams] (../mindmap-diagrams).
 
-`idea`
+<!-- label:ideas -->
 Support additional wiki software:
-* GitHub / other syntaxes 
-* MediaWiki
+* [GitHub wiki] (https://github.com/features/projects/wikis) / other syntaxes 
+* [MediaWiki] (http://www.mediawiki.org)
 * etc.

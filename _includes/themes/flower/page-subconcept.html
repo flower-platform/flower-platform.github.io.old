@@ -1,7 +1,16 @@
 	<div class="page-header">
 		<h1>{{ _page_title }} {% if _page_tagline %} <small>{{ _page_tagline }}</small>{% endif %}</h1>
+	<div class="alert alert-success">
+	<strong>Concepts + Discussions = Features</strong>. The place where you <strong>learn</strong> about the concepts and features of Flower Platform.<br/>
+		The place where the <strong>community discusses and dictates</strong> the specification of Flower Platform modeling language, features and workflows.  
 	</div>
-	
+	</div>
+<!-- 
+	<div class="page-header">
+		<h1>Concepts + Discussions = Features {% if _page_title %} <small>{{ _page_title }}</small>{% endif %}</h1>
+	</div>
+ -->
+ 
 	{% assign pages_list = site.pages %}
 
 	{% for node in pages_list %}

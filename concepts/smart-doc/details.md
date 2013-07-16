@@ -4,6 +4,7 @@ group: subconcept
 parent-id: smart-doc
 
 title: "3. Doc on Feature Details"
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`in progress`
 
 Now the user has seen a demo and he has made the first steps on his projects/code/etc.
 

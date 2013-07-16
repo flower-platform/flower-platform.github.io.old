@@ -4,6 +4,7 @@ group: subconcept
 parent-id: sharing-and-collaboration
 
 title: "Comments"
+labels: [ideas, planned]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,18 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-<div>
-
-	<h1>Comments</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-ideas">Ideas for Improvements</span></li>
-	    <li><span class="label label-planned">Planned</span></li>
-	    <a class="btn btn-success pull-right">Rate &amp; Discuss This Concept!</a>
-    </ul>
-    <hr/>
-</div>
 
 Real time collaboration sometimes is not enough; because contributors on a project (especially on open-source projects) are not available at the same time (e.g. because of time zones, work schedule, etc.).
 

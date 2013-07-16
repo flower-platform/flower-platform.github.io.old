@@ -4,6 +4,7 @@ group: subconcept
 parent-id: mindmap-diagrams
 
 title: "Mindmap Connected with Other Tools"
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`in progress`
 
 Mindmaps display hierarchical data. And a lot of data that we handle daily can be represented as a hierarchy. I.e. shown as a mindmap.
 

@@ -4,6 +4,7 @@ group: subconcept
 parent-id: smart-structure-diagrams
 
 title: "Dynamic Compartments"
+labels: [ideas, planned]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,17 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-<div>
-
-	<h1>Dynamic Compartments</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-ideas">Ideas for Improvements</span></li>
-	    <li><span class="label label-planned">Planned</span></li>
-    </ul>
-    <hr/>
-</div>
 
 The UML notation uses "attributes" and "operations" to show the contents of a class. However, often a class or a source file has several groups of attributes + methods, clustered per business role, or other criteria. E.g.:
 

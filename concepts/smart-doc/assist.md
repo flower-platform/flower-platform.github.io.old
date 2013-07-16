@@ -4,6 +4,7 @@ group: subconcept
 parent-id: smart-doc
 
 title: "2. Assist the User to Get Started"
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`in progress`
 
 Once the user has seen the demo on live sample data, Flower Platform will display a check list. This check list are the steps that the user needs to do to get started effectively with a certain feature of Flower Platform.
 

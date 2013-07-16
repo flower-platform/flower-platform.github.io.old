@@ -4,6 +4,7 @@ group: subconcept
 parent-id: sharing-and-collaboration
 
 title: "Real Time Collaboration on Diagrams"
+labels: [implemented]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,17 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-<div>
-
-	<h1>Real Time Collaboration on Diagrams</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-implemented">Implemented</span></li>
-	    <a class="btn btn-success pull-right">Rate &amp; Discuss This Concept!</a>
-    </ul>
-    <hr/>
-</div>
 
 The web (and mobile) version of Flower Platform allows people to collaborate in real time on any editor (diagram, code and other editors). Any modification made by one user is instantly propagated to the other people that view the same resource (diagram, file, etc.).
 

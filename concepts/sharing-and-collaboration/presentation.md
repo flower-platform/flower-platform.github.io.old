@@ -4,6 +4,7 @@ group: subconcept
 parent-id: sharing-and-collaboration
 
 title: "Presentation Tools"
+labels: [implemented, ideas]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -13,22 +14,8 @@ comments: true
 ---
 {% include JB/setup %}
 
-<div>
-
-	<h1>Presentation Tools</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-implemented">Implemented</span></li>
-	    <li><span class="label label-ideas">Ideas for Improvements</span></li>
-	    
-	    <a class="btn btn-success pull-right">Rate &amp; Discuss This Concept!</a>
-    </ul>
-    <hr/>
-</div>
-
 When you collaborate with other users, either if they are in the same room with you, or if you are all in a conf call (e.g. skype), you may want to **back you speech** with some visual aids. We call them presentation figures. They work in every editor (diagram or text).
 
-<div>
 <p class="text-center">
 	<img class="img-polaroid" src="presentation1.png"/><br/>
 	<em>Presentation tools on a text editor</em><br/><br/>
@@ -36,8 +23,7 @@ When you collaborate with other users, either if they are in the same room with 
 	<em>Presentation figure with additional text, on a diagram</em>
 </p>
 
-<span class="label label-ideas">Ideas for Improvements</span>
-</div>
+<!-- label:ideas -->
 
 In the current version of Flower Platform, the presentation figures are visible to all the users that view a resource. It may be interesting to create some kind of conferences. 
 

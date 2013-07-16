@@ -4,6 +4,7 @@ group: subconcept
 parent-id: sharing-and-collaboration
 
 title: "Collaboration from IDE. Peer Programming"
+labels: [ideas]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,18 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-<div>
-
-	<h1>Collaboration from IDE. Peer Programming</h1>
-    <ul class="breadcrumb">
-	    <li class="active">Labels:</li>
-	    <li><span class="label label-ideas">Ideas for Improvements</span></li>
-	    
-	    <a class="btn btn-success pull-right">Rate &amp; Discuss This Concept!</a>
-    </ul>
-    <hr/>
-</div>
 
 The collaboration features work on data that exists on the Flower Platform server. So, prior to collaborating with another developer, we need to upload the data to the server (e.g. commit on a Git branch). When the collaboration session ends, we need to pull the data back to our IDE.
 

@@ -4,6 +4,7 @@ group: subconcept
 parent-id: code-editor
 
 title: "Hyperlink Navigation"
+labels: [implemented]
 #tagline: "tagline"
 comments: true
 # in case you want to force a disqus identifier, when you rename the page
@@ -12,8 +13,6 @@ comments: true
 #comments_identifier: "identifier"
 ---
 {% include JB/setup %}
-
-`implemented`
 
 <img class="img-polaroid" style="float:right" src="hyperlink-navigation.png"/>
 
