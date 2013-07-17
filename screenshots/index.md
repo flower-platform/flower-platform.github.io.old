@@ -55,8 +55,10 @@ Permission"
   -
     picture: "zoom-on-classes-without-doc.png"
     thumb: "zoom-on-classes-without-doc-300x200.png"
-    title: "Class"
-    text: "Class without documentation"        
+    title: "Structure (Class) Diagram"
+    text: "**Classes** linked with **dependency** relations.
+
+Different **colors** per class members (attributes, operations). Interface with 'attributes' and 'operations' **compartments collapsed**."        
 ---
 {% include JB/setup %}
 
