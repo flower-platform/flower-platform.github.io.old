@@ -13,7 +13,7 @@
     setTimeout(function () {
       $('.bs-docs-sidenav').affix({
         offset: {
-          top: function () { return $window.width() <= 980 ? 200 : 150 }
+          top: function () { return $window.width() <= 980 ? 455 : ($window.width() <= 1200 ? 370 : 210) }
         }
       })
     }, 100)
