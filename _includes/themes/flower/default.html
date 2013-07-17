@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{% if page.url == "/index.html" %}Flower Platform{% else %}{{ page.title }} &bull; Flower Platform{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -65,7 +65,7 @@
 					<span class="icon-bar"></span>
 				</a>
 
-				<a class="brand" href="{{ HOME_PATH }}">Flower Platform</a>
+				<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						{% assign pages_list = site.pages %}
