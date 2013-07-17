@@ -12,7 +12,7 @@ paginate_path: "/blog/page:num"
 # so be sure to set them if your theme uses them.
 #
 title : Flower Platform
-tagline: The Open Source Modelling Platform
+tagline: The Open Source Modeling Platform
 author :
   name : Flower Team
   email : flower_platform_team@flower_platform.org
