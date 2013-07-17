@@ -1,0 +1,34 @@
+{% comment %} adds a thumbnail to a list already created
+	Parameters:
+		- thumbnail_picture - the picture to point to
+		- thumbnail_thumb - the thumb of the picture
+		- thumbnail_text - text under the thumbnail
+		
+	Use mode:
+		<ul class="thumbnails">
+			{% assign thumbnail_picture = "pictue.ext" %}
+			{% assign thumbnail_thumb = "thumb.ext" %}
+			{% capture thumbnail_text %} Some test with markdown {% endcapture %}
+			{% include misc/thumbnails %}
+		</ul>
+{% endcomment %}
+
+
+<ul class="thumbnails">
+{% for thumb in page.thumbnails %}
+	{% assign for_modul = forloop.index0 | modulo: 3 %}
+	{% if forloop.index0 > 0 and 0 == for_modul %}
+</ul>
+<ul class="thumbnails">
+	{% endif %}
+	<li class = "span4">
+		<div class="thumbnail">
+			<a href="{{ thumb.picture }}" class="thumbnail" title="{{ thumb.text | markdownify | strip_html }}">
+				<img src="{{ thumb.thumb }}"/>
+			</a>
+			{% if thumb.title %}<h3>{{ thumb.title | markdownify }}</h3>{% endif %}
+			{% if thumb.text %}{{ thumb.text | markdownify }}{% endif %}
+		</div>
+	</li>
+{% endfor %}
+</ul>
