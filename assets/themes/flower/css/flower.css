@@ -74,6 +74,20 @@ body > .navbar .brand {
 	background: url(/assets/imgs/play-button.png) no-repeat center center;
 }
 
+ul.homepage
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul.homepage li
+{
+	background-image: url(/assets/imgs/orange-bullet.png);
+	background-repeat: no-repeat;
+	background-position: 0px 3px; 
+	padding-left: 20px;
+}
+
 /* Sections */
 
 /* padding for in-page bookmarks and fixed navbar */
