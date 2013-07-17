@@ -37,12 +37,14 @@
 {% assign navigation_file_arr = navigation_file | split: '|' %}
 
 {% for node_order in navigation_order_arr %}
-	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}
+	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}{% assign icon = nil %}
 	{% if node_order == 'home' %}
 		{% assign node_url = HOME_PATH %}{% assign title = 'Home' %}
 		{% if current_page.url == '/index.html' %}{% assign active = true %}{% endif %}
+		{% assign icon = "icon-home" %}
 	{% elsif node_order == 'forum' %}
 		{% assign active = false %}{% assign node_url = '//www.flower-platform.com/forum/' %}{% assign title = 'Forum' %}
+		{% assign icon = "icon-comment" %}
 	{% else %}
 		{% for node in navigation_file_arr %}
 			{% if node == node_order %}
@@ -50,6 +52,7 @@
 				{% if node_url == current_page.url %}{% assign active=true %}{% endif %}
 				{% if node == 'blog' %}
 					{% if current_page.url contains '/blog/' %}{% assign active = true %}{% endif %}
+					{% assign icon = "icon-tasks" %}
 				{% endif %}
 				{% if node == concepts_file  %}{% unless current_page.url contains '/blog/' %}
 					{% assign node_url = concepts_url %}
@@ -61,7 +64,7 @@
 		{% endfor %}
 	{% endif %}
 	{% if title %}
-	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{{title}}</a></li>
+	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{% if icon %}<i class="{{ icon }}"></i> {% endif %}{{title}}</a></li>
 	{% endif %}
 {% endfor %}
 
