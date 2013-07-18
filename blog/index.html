@@ -24,8 +24,14 @@ description: ""
 			{% endif %}
 			</div>
 		
+			<div class="breadcrumb post-share">
+				{% assign share_url = post.url %}
+				{% assign share_title = post.title %}
+				{% include misc/share %}
+			</div>
+		
 			<div> 
-				<a href="{{ post.url }}">Read more...</a>
+				<a href="{{ post.url }}" class="btn btn-primary">more &rarr;</a>
 			</div>	
 			
 			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>

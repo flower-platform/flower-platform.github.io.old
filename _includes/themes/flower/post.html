@@ -2,12 +2,6 @@
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
 </div>
 
-<div class="breadcrumb post-share">
-	{% assign share_url = page.url %}
-	{% assign share_title = page.title %}
-	{% include misc/share %}
-</div>
-
 
 <div class="row-fluid post-full">
   <div class="span8">
@@ -17,6 +11,11 @@
     <div class="content">
       {{ content }}
     </div>
+    <div class="breadcrumb post-share">
+	{% assign share_url = page.url %}
+	{% assign share_title = page.title %}
+	{% include misc/share %}
+	</div>
 	<hr class="soften post"/>
     <div class="pagination">
       <ul>
