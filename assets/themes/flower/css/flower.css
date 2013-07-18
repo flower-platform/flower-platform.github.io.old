@@ -353,6 +353,12 @@ div.post-head {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1199px) {
+	#movie-image {
+		margin-top: 25px;
+	}
+}
+
 @media (max-width: 1128px) {
 	.fork_github {
     	display: none;
