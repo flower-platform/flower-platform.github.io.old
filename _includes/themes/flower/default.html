@@ -122,9 +122,9 @@
 			scrolling:'true',
 			reposition:'true',
 			title: function() {
-				return $(this).next("p").text();
-			}
-			});
+				return "<a href=\"" + $(this).attr('href') + "\" style=\"color: #111\"><strong>" + $(this).next("h3").text() + "</strong></a><br/>" + $(this).attr('title');
+			},
+		});
 	</script>
 	{% endif %}
 
