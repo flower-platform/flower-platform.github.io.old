@@ -358,6 +358,12 @@ div.post-head {
 	}
 }
 
+.homepage-center {
+	text-align: center;
+	vertical-align: baseline;
+	padding-top: 10px;
+}
+
 /* Desktop
 ------------------------- */
 @media (max-width: 980px) {
