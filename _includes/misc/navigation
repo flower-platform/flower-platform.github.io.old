@@ -14,7 +14,12 @@
 {% assign navigation_href = nil %}{% assign navigation_titles = nil %}{% assign navigation_file = nil %}{% assign concepts_node = nil %}
 
 {% for node in pages_list %}
-	{% assign file = node.url | remove: '/index.html' | split: '/' | last %}
+	{% assign url_parts = node.url | remove: '/index.html' | split: '/' %}
+	{% assign file = url_parts | last %}
+	{% if url_parts | size == 1 %}
+		{% assign file = file | remove: ".html" %}
+	{% endif %}
+	
 	{% if navigation_order contains file %}
 		{% assign navigation_href = navigation_href | append:'|' | append:node.url %}
 		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
