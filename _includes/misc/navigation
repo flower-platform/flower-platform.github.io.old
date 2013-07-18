@@ -51,7 +51,7 @@
 		{% assign active = false %}{% assign node_url = '//www.flower-platform.com/forum/' %}{% assign title = 'Forum' %}
 		{% assign icon = "icon-comment" %}
 	{% elsif node_order == 'tutorials-and-doc-fp1' %}
-		{% assign active = false %}{% assign node_url = '//www.flower-platform.com/forum/' %}{% assign title = 'Tutorials and Doc' %}
+		{% assign active = false %}{% assign node_url = '//doc-flower-platform-v1.flower-platform.org/flower_dev_center/tutorials/first_steps_with_flower_dev_center' %}{% assign title = 'Tutorials' %}
 		{% assign icon = "icon-book" %}
 	{% else %}
 		{% for node in navigation_file_arr %}
