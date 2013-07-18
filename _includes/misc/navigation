@@ -50,6 +50,9 @@
 	{% elsif node_order == 'forum' %}
 		{% assign active = false %}{% assign node_url = '//www.flower-platform.com/forum/' %}{% assign title = 'Forum' %}
 		{% assign icon = "icon-comment" %}
+	{% elsif node_order == 'tutorials-and-doc-fp1' %}
+		{% assign active = false %}{% assign node_url = '//www.flower-platform.com/forum/' %}{% assign title = 'Tutorials and Doc' %}
+		{% assign icon = "icon-book" %}
 	{% else %}
 		{% for node in navigation_file_arr %}
 			{% if node == node_order %}
