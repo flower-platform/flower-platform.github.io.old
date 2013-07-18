@@ -16,7 +16,8 @@
 {% for node in pages_list %}
 	{% assign url_parts = node.url | remove: '/index.html' | split: '/' %}
 	{% assign file = url_parts | last %}
-	{% if url_parts | size == 1 %}
+	{% assign num_parts = url_parts | size %}
+	{% if num_parts == 2 %}
 		{% assign file = file | remove: ".html" %}
 	{% endif %}
 	
