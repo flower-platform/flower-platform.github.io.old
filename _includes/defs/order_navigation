@@ -1,2 +1,2 @@
-{% assign navigation_order = 'home concepts screenshots blog forum' %}
+{% assign navigation_order = 'home concepts screenshots demo blog forum' %}
 {% assign navigation_order_arr = navigation_order | split:' ' %}
