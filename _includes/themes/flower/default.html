@@ -125,7 +125,9 @@
 				return "<a href=\"" + $(this).attr('href') + "\"><strong>" + $(this).next("h3").text() + "</strong></a><br/>" + $(this).attr('title');
 			},
 			maxWidth: function() {return $(window).width(); },
-			maxHeight: function() {return $(window).height(); }
+			maxHeight: function() {return $(window).height(); },
+			onComplete: function() {
+			}
 		});
 	</script>
 	{% endif %}
