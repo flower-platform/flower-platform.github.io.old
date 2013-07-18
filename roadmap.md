@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "History & Roadmap"
+title: "Roadmap"
 #tagline: "from Flower Platform 1.1.*"
 ---
 
