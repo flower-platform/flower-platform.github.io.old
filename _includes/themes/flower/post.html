@@ -1,6 +1,13 @@
-<div class="page-header">
+<div class="page-header post-head">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
 </div>
+
+<div class="breadcrumb post-share">
+	{% assign share_url = page.url %}
+	{% assign share_title = page.title %}
+	{% include misc/share %}
+</div>
+
 
 <div class="row-fluid post-full">
   <div class="span8">
@@ -49,11 +56,6 @@
 		<li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
 		{% endfor %}
 	</ul>
-	<hr class="soften post"/>
-	<h4>Share this on</h4>
-	{% assign share_url = page.url %}
-	{% assign share_title = page.title %}
-	{% include misc/share %}
   </div>
 </div>
     <hr/>

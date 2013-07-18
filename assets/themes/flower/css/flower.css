@@ -307,6 +307,15 @@ body .fb-like {
 	display: inline;
 }
 
+div.post-share {
+	padding: 8px 10px 4px;
+}
+
+div.post-head {
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+
 .oscon {
 	width: 100%;
 	padding-top: 40px;
