@@ -122,8 +122,13 @@
 			scrolling:'true',
 			reposition:'true',
 			title: function() {
-				return "<a href=\"" + $(this).attr('href') + "\" style=\"color: #111\"><strong>" + $(this).next("h3").text() + "</strong></a><br/>" + $(this).attr('title');
+				return "<a href=\"" + $(this).attr('href') + "\"><strong>" + $(this).next("h3").text() + "</strong></a><br/>" + $(this).attr('title');
 			},
+			maxWidth: function() {return $(window).width(); },
+			maxHeight: function() {return $(window).height(); },
+			onComplete: function() {
+				$("#cboxContent").append("<p>Click to got to the next picture</p>");
+			}
 		});
 	</script>
 	{% endif %}
