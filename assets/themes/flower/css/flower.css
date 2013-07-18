@@ -12,6 +12,8 @@ h3 code {
 
 .hero-homepage {
 	margin-bottom: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 /* Tweak navbar brand link  */
@@ -61,6 +63,12 @@ body > .navbar .brand:hover {
 	right: 0;
 	z-index: 1;
 	background: url(/assets/imgs/play-button.png) no-repeat center center;
+}
+
+#movie-image p {
+	margin: 5px 0 3px 0;
+	text-align: center;
+	font-size: 15px;
 }
 
 ul.homepage
@@ -343,6 +351,12 @@ div.post-head {
   	width: 800px;
   	margin-left: -400px;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+	#movie-image {
+		margin-top: 25px;
+	}
 }
 
 @media (max-width: 1128px) {
