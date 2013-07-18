@@ -12,7 +12,6 @@
 {% include defs/order_navigation %}
 
 {% assign navigation_href = nil %}{% assign navigation_titles = nil %}{% assign navigation_file = nil %}{% assign concepts_node = nil %}
-
 {% for node in pages_list %}
 	{% assign url_parts = node.url | remove: '/index.html' | split: '/' %}
 	{% assign file = url_parts | last %}
