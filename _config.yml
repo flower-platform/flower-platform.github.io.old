@@ -14,7 +14,7 @@ paginate_path: "/blog/page:num"
 title : Flower Platform
 tagline: The Open Source Modeling Platform
 author :
-  name : Flower Team
+  name : Flower Platform Team
   email : flower_platform_team@flower_platform.org
   github : flower-platform
   twitter : flower_platform
