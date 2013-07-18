@@ -27,19 +27,13 @@ ul.rate_button {
 	margin-bottom: 10px;
 }
 
-/* Change the brand */
 body > .navbar .brand {
-  padding-right: 0;
-  padding-left: 0;
-  margin-left: 20px;
-  float: right;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
+	padding: 4px 10px 2px 2px;
+	height: 32px;
+	width: 211px;
+	background: url(/assets/imgs/logo_flower-platform_long_h32.png) no-repeat center center;
 }
+
 body > .navbar .brand:hover {
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
@@ -53,11 +47,6 @@ body > .navbar .brand:hover {
 	border: 0; 
 	z-index: 1040;
 }
-
-/* make the navbar/btn-navbar take the github fork image into account */
-body > .navbar .brand {
-	padding-right: 140px;
-} 
 
 #movie-image {
 	position: relative;
@@ -328,6 +317,14 @@ div.post-head {
 
 /* Responsive */
 
+@media (max-width: 1199px) {
+	body > .navbar .brand {
+		height: 32px;
+		width: 32px;
+		background: url(/assets/imgs/logo_flower-platform_short_h32.png) no-repeat center center;
+	}
+}
+
 /* Desktop large */
 @media (min-width: 1200px) {
   .bs-docs-sidenav {
@@ -380,6 +377,12 @@ div.post-head {
   }
   .navbar .btn-navbar {
     margin-right: 5px;
+  }
+  
+  body > .navbar .brand {
+	height: 32px;
+	width: 211px;
+	background: url(/assets/imgs/logo_flower-platform_long_h32.png) no-repeat center center;
   }
 }
 
