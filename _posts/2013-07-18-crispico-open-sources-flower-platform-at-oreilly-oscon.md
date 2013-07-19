@@ -6,9 +6,9 @@ category: events
 tags: [events, news]
 ---
 
-Flower Platform is a web based diagramming software, with a strong focus on source code. I.e. diagrams (UML-like) on which users can collaborate in real-time. Diagrams which are synchronized with the actual source code (e.g. from Git, SVN).
-
 On the occasion of Flower Platform exhibiting at O'Reilly OSCON (Innovator's Pavilion, booth P14), we have some pieces of good news to share.
+
+Flower Platform is a web based diagramming software, with a strong focus on source code. I.e. diagrams (UML-like) on which users can collaborate in real-time. Diagrams which are synchronized with the actual source code (e.g. from Git, SVN).
 
 <div>
 <p>
