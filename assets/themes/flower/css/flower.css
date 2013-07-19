@@ -328,20 +328,6 @@ div.post-head {
 }
 
 
-.nav-tabs>li>a {
-	border: 1px solid #ddd;
-	border-bottom-color: transparent;
-	background-color: #f4f4f4;
-}
-
-.nav-tabs > li {
-	border-bottom: 1px solid #ddd;
-}
-
-.nav-tabs > li.active {
-	border-bottom-color: transparent;
-}
-
 /* Responsive */
 
 @media (max-width: 1199px) {
