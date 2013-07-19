@@ -9,7 +9,7 @@ tags: [events, news]
 On the occasion of Flower Platform exhibiting at O'Reilly OSCON (Innovator's Pavilion, booth P14), we have some pieces of good news to share.
 
 Flower Platform is a web based diagramming software, with a strong focus on source code. I.e. diagrams (UML-like) on which users can collaborate in real-time. Diagrams which are synchronized with the actual source code (e.g. from Git, SVN).
-
+ 
 <div>
 <p>
 <strong>Good news #1.</strong> <a href="http://www.crispico.com">Crispico</a> <strong>open sources Flower Platform</strong>, under GPL v3. Flower Platform is an open software now, with an open diagramming/modeling language. The community will dictate (and even contribute) which are the features they need, specific to their workflows, programming languages and tools. 
