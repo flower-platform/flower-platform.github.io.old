@@ -32,5 +32,5 @@ The following programming languages will be supported starting with Flower Platf
 * C++
 * C#
 * Scala
-* Clojure
+* Clojure 
 * Groovy
