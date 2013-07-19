@@ -25,7 +25,7 @@ On the occasion of Flower Platform exhibiting at O'Reilly OSCON (Innovator's Pav
 </p>
 
 <p>
-<strong>Good news #3.</strong> We have redone the Flower Platform <strong>web site</strong>. <a href="http://flower-platform.org">flower-platform.org</a> is, first of all, a communication platform between the <strong>community</strong> and the Flower Platform team (and vice-versa as well). E.g. the section <a href="http://flower-platform.org/concepts.html">Concepts + Discussions = Features</a> shows in the same place: what Flower Platform <em>does</em>, what it <em>will do</em>, <em>ideas</em> about what it should do and <em>discussions</em> around these points.
+<strong>Good news #3.</strong> We have redone the Flower Platform <strong>web site</strong>. <a href="http://flower-platform.org">flower-platform.org</a> is, first of all, a communication platform between the <strong>community</strong> and the Flower Platform team (and vice-versa as well). E.g. the section <a href="http://flower-platform.org/concepts">Concepts + Discussions = Features</a> shows in the same place: what Flower Platform <em>does</em>, what it <em>will do</em>, <em>ideas</em> about what it should do and <em>discussions</em> around these points.
 </p>
 
 <p class="text-center">
