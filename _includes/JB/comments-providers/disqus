@@ -2,7 +2,7 @@
 <script type="text/javascript">
     {% if site.safe == false %}var disqus_developer = 1;{% endif %}
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
-    var disqus_title = '{{ page.title }}';
+    var disqus_title = "{{ page.title }}";
 	
     var disqus_identifier = {% if page.comments_identifier %}'{{ page.comments_identifier }}'{% else %}'flower_platform{{ page.url | replace: '/',':' | replace: '.html','' }}'{% endif %};
     {% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% endif %}
