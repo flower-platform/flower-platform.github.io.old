@@ -41,7 +41,6 @@ We are looking forward to meet people at OSCON, to learn about the programming l
 <p>
 <span class="label label-success">Remember Flower Platform philosophy:</span> It is Flower Platform that should adapt to what the developers do and how they do it. And not the opposite! I.e. it is Flower Platform that should adapt to their programming languages (OOP or not!), their tools (IDE, Version Control, Issue Tracker, wiki, etc.) and their workflows. 
 </p>
-
 </div>
 
 
