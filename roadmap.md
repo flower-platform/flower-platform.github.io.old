@@ -34,5 +34,5 @@ Crispico is currently working on Flower Platform 2.0.0, scheduled for release: e
 * Pluggable architercture
 
 <div>
-<span class="label label-info">Hint</span> For more details, take a look at the <a href="concepts">Concepts + Discussions = Features</a> section, at the concepts labeled with "In progress".
+	<span class="label label-info">Hint</span> For more details, take a look at the <a href="concepts">Concepts + Discussions = Features</a> section, at the concepts labeled with "In progress".
 </div>
