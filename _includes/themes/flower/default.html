@@ -130,6 +130,25 @@
 				$(".cboxPhoto").attr("title", "Click to go to the next picture");
 			}
 		});
+		
+		function equalHeight(group) {    
+		    tallest = 0;    
+		    group.each(function() {
+		    	var grp = $(this).find("div.thumbnail");
+		    	grp.each(function() {
+			        thisHeight = $(this).height();       
+			        if(thisHeight > tallest) {          
+			            tallest = thisHeight;       
+			        }    
+		    	});
+			    grp.each(function() { $(this).height(tallest); });
+			    tallest = 0;
+		    });    
+		} 
+
+		$(document).ready(function() {   
+		    equalHeight($("ul.thumbnails")); 
+		});
 	</script>
 	{% endif %}
 
