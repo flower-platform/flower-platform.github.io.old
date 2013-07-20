@@ -9,6 +9,7 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	{% assign redirect_url = nil %}
 	{% if page.redirect == true and page.concepts-home == true %}
 		{% assign first_tab = page.order | split: ' ' | first %}
 		
@@ -18,6 +19,10 @@
 				{% assign redirect_url = node.url %}
 			{% endif %}
 		{% endfor %}
+	{% elsif page.redirect_url %}
+		{% assign redirect_url = page.redirect_url %}
+	{% endif %}
+	{% if redirect_url %}
 <script type="text/javascript">
 <!--
 	window.location = "{{redirect_url}}"
