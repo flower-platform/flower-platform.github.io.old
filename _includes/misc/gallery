@@ -1,0 +1,4 @@
+<a class="gallery" href="{{ large_img }}" title="{{ img_desc }}">
+	<img src="{{ small_img }}" />
+</a>
+{% assign large_img = nil %}{% assign small_img = nil %}{% assign img_desc = nil %}
