@@ -12,7 +12,7 @@ After many months of hard work, the Flower Platform team is very proud to announ
 
 <span class="label label-primary">Guide!</span> We have prepared a small guide that would help you make a quick tour of Flower Platform. More precisely:
 
-Don't hesitate to leave us a comment to tell us what you think about Flower Platform 4!
+Leave us a comment telling us what you think about Flower Platform 4!
 
 From the web browser:
 
@@ -85,7 +85,7 @@ Download Flower Platform Mobile from [Google Play](https://play.google.com/store
 
 The app is configured to connect automatically to the Flower Platform Hub. 
 
-The app is automatically configured to connect to the Flower Platform Hub. [The mobile section](/extensions/mobile/#ServerAccountsscreen) details the server accounts management.
+<span class="label label-success">Tip:</span> [The mobile section](/extensions/mobile/#ServerAccountsscreen) details the server accounts management.
 
 <img class="img-thumbnail center-block" src="/blog-img/2014-05-15/flow-mobile-config.png"/>
 

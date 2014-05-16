@@ -55,8 +55,8 @@ More <span class="glyphicon glyphicon-chevron-down"></span>
 </button></div>
 
 <div id="why-details" class="collapse" markdown="1">
-* Best practices recommend us (developers) to use various modern libraries and frameworks. This helps us at **runtime**. 
-* Best practices advocate the use of various tools, techniques, development methods, etc. This boosts our productivity by improving our **work flow**.
+* **Best practices** recommend us (developers) to use various modern libraries and frameworks. This helps us at **runtime**. 
+* **Best practices** advocate the use of various tools, techniques, development methods, etc. This boosts our productivity by improving our **work flow**.
 
 The state of the art in our field of work (i.e. the number and quality of programming languages, libraries, frameworks, IDEs, development tools, etc.) is **awesome**. But we (the Flower Platform dev team) think that things can be "MOAR" awesome, if we had an intelligent tool that would:
 
@@ -78,11 +78,11 @@ The state of the art in our field of work (i.e. the number and quality of progra
 
 Sharing and collaboration around mind maps and diagrams are a primary focus. 
 
-The server side code is written in Java and it's modular, packed as [OSGi plugins](http://www.osgi.org) (in an [Eclipse Equinox](http://www.eclipse.org/equinox/) container). 
+The server side code is written in Java and it's modular, packed as [OSGi plugins](http://www.osgi.org) (inside an [Eclipse Equinox](http://www.eclipse.org/equinox/) container). 
 
 The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) is also modular.
 
-<p><a class="btn btn-default" href="extensions/core" role="button">More &raquo;</a></p>
+<p><a class="btn btn-default" href="extensions/core-web-app" role="button">More &raquo;</a></p>
 </div>
 
 <div class="col-md-4" markdown="1">
@@ -94,7 +94,7 @@ The platform makes it easy for extensions to expose most of their features on mo
 
 The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) runs on mobile using the [Adobe AIR](http://www.adobe.com/products/air.html) technology.
 
-<p><a class="btn btn-default" href="extensions/mobile" role="button">More &raquo;</a></p>
+<p><a class="btn btn-default" href="extensions/core-mobile" role="button">More &raquo;</a></p>
 </div>
 
 <div class="col-md-4" markdown="1">
@@ -106,7 +106,7 @@ Designed to integrate into IDEs, using an embedded servlet container ([Jetty](ht
 
 [IntelliJ IDEA](http://www.jetbrains.com/idea/) and other IDEA based IDEs are supported as well, using a small Equinox based host wrapper. The same principle can be used to easily support other IDEs in the future. 
 
-Same **single sourcing** concept applies here as well (i.e. same server and client code runs both in a web deployment or in a IDE/local deployment).
+The **single sourcing** concept applies here as well (i.e. same server and client code runs both in a web deployment or in a IDE/local deployment).
 </div>
 
 </div>
@@ -136,13 +136,15 @@ Collaborate in real time on [Freeplane](http://freeplane.sourceforge.net/) (or [
 
 Several extensions are under active development. 
 
-They should be released in a couple of month. They are interesting and really add value to developers!
+They should be released in a couple of months. They are interesting and really add value to developers!
 </div>
 </div>
 
 # Flower Platform Hub
 <hr>
 **Flower Platform Hub** is an online free service: the Flower Platform ecosystem, in a cloud based environment. Users have the access to all the features of the Flower Platform & extensions, without having to install and maintain a Flower Platform server. Flower Platform Hub is meant to be used by open source communities.
+
+<p><a class="btn btn-success" href="http://hub.flower-platform.com">Go to Flower Platform Hub</a></p>
 
 <h1>History <small>Important historical milestones of Flower Platform</small></h1>
 <hr>
@@ -170,9 +172,10 @@ More <span class="glyphicon glyphicon-chevron-down"></span>
 
 ### Flower Platform v4: Smart mind maps and diagrams for developers
 
-* December 2, 2013: Crispico decides once again to perform a major rewrite, because of 2 main resons:
-  * Scalability. For Flower Platform <= v3, we were managing and persisting data with [Eclipse EMF](https://www.eclipse.org/modeling/emf/). EMF is a great technology, that offers a lot of features. But, from our experience, when we need to scale, and persist data in a data store (SQL or NoSQL), things begin to be complex. And the amount of complexity > the comfort offered by the EMF framework. That's why, we decided to abandon EMF, in favour of an in-house implementation, more light-weight and scalable.
-  * Slight strategy shift. We decided to focus more on representing data as mind maps rather than diagrams. We find that mind maps are somehow between a text editor (rather key oriented) and a diagram (rather mouse oriented) and they offer better productivity for developers.
+December 2, 2013: Crispico decides once again to perform a major rewrite, because of 2 main resons:
+
+* Scalability. For Flower Platform <= v3, we were managing and persisting data with [Eclipse EMF](https://www.eclipse.org/modeling/emf/). EMF is a great technology, that offers a lot of features. But, from our experience, when we need to scale, and persist data in a data store (SQL or NoSQL), things begin to be complex. And the amount of complexity > the comfort offered by the EMF framework. That's why, we decided to abandon EMF, in favour of an in-house implementation, more light-weight and scalable.
+* Slight strategy shift. We decided to focus more on representing data as mind maps rather than diagrams. We find that mind maps are somehow between a text editor (rather key oriented) and a diagram (rather mouse oriented) and they offer better productivity for developers.
 </div>
 
 </div><!-- .content -->

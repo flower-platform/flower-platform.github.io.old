@@ -8,7 +8,7 @@ comments: true
 
 # Flower Platform Web App
 
-<p><a class="btn btn-success" href="https://github.com/flower-platform/flower-platform-4/releases/download/2014-05-15-0.1.0/flower-platform.war">Download Flower Platform 4 Web App<br>v0.1.0 (Proof of Concept)</a></p>
+<p><a class="btn btn-success" href="https://github.com/flower-platform/flower-platform-4/releases/download/2014-05-16-v0.1.1/flower-platform.war">Download Flower Platform 4 Web App<br>v0.1.1 (Proof of Concept)</a></p>
 
 ## Install / Upgrade
 
@@ -47,7 +47,7 @@ If you encounter **difficulties** in installing Flower Platform, please **start 
 
 # Flower Platform Mobile
 
-<p><a class="btn btn-success" href="https://github.com/flower-platform/flower-platform-4/releases/download/2014-05-15-0.1.0/flower-platform.war">Download Flower Platform 4 Mobile<br>(from Google Play)</a></p>
+<p><a class="btn btn-success" href="https://play.google.com/store/apps/details?id=air.org.flowerplatform">Download Flower Platform 4 Mobile<br>(from Google Play)</a></p>
 
 # Flower Platform for IDE
 
