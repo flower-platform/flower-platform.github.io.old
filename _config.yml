@@ -47,6 +47,7 @@ custom_settings:
   #		icon - the icon (recognizable are only glyphicon- and fa-)
   #		title - the title for menu (for custom_pages or start_dropdown)
   #		link - url to go to for custom_page
+  #		open_in_new_tab - opens the page in a new tab if true (for custom_page)
   #		hidden_sm - when the ecran becomes smaller, in order not to 
   #		 wrap on multiple pages, only the icon will be shown			
   navigation_order:
@@ -70,6 +71,7 @@ custom_settings:
     -
       page: custom_page
       link: http://hub.flower-platform.com
+      open_in_new_tab: true
       title: Flower Platform Hub
       icon: fa-cloud
     

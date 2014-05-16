@@ -72,6 +72,7 @@ Usage:
 	{% elsif node_order.page == 'custom_page' %}
 		{% assign node_url = node_order.link %}
 		{% assign title = node_order.title %}
+		{% assign open_in_new_tab = node_order.open_in_new_tab %}
 		{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
 		{% if node_order.hidden_sm == true %}{% assign hidden_sm = true %}{% endif %}
 	{% else %}
@@ -94,7 +95,7 @@ Usage:
 		{% endfor %}
 	{% endif %}
 	{% if title %}
-	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %} title="{{ title }}">{% if icon contains "glyphicon-" %}<span class="glyphicon {{ icon }}"></span>{% elsif icon contains "fa-" %}<i class="fa {{ icon }} fa-lg"></i>{% endif %}{% if hidden_sm == true %}<span class="hidden-sm">{% endif %} {{title}} {% if hidden_sm == true %}</span>{% endif %}</a></li>
+	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}" {%if open_in_new_tab == true %} target="_blank" {% endif %} {%if active == true %} class="active" {% endif %} title="{{ title }}">{% if icon contains "glyphicon-" %}<span class="glyphicon {{ icon }}"></span>{% elsif icon contains "fa-" %}<i class="fa {{ icon }} fa-lg"></i>{% endif %}{% if hidden_sm == true %}<span class="hidden-sm">{% endif %} {{title}} {% if hidden_sm == true %}</span>{% endif %}</a></li>
 	{% endif %}
 {% endfor %}
 {% if dropdown_started == true %}
