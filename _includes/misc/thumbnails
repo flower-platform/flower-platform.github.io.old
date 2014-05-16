@@ -13,22 +13,25 @@
 		</ul>
 {% endcomment %}
 
-
-<ul class="thumbnails">
-{% for thumb in page.thumbnails %}
-	{% assign for_modul = forloop.index0 | modulo: 3 %}
-	{% if forloop.index0 > 0 and 0 == for_modul %}
-</ul>
-<ul class="thumbnails">
-	{% endif %}
-	<li class = "span4">
+<div class="row">
+	{% for thumb in thumbnails %}
+		{% assign for_modul = forloop.index0 | modulo: 3 %}
+		{% if forloop.index0 > 0 and 0 == for_modul %}
+</div>
+<div class="row">
+		{% endif %}
+	<div class="col-sm-4">
 		<div class="thumbnail">
 			<a href="{{ thumb.picture }}" class="thumbnail" title="{{ thumb.text | markdownify | strip_html }}">
-				<img src="{{ thumb.thumb }}"/>
+				<img src="{{ thumb.thumb }}">
 			</a>
-			{% if thumb.title %}<h3>{{ thumb.title | markdownify }}</h3>{% endif %}
-			{% if thumb.text %}{{ thumb.text | markdownify }}{% endif %}
+			<div class="caption">
+				{% if thumb.title %}<h3>{{ thumb.title | markdownify }}</h3>{% endif %}
+				{% if thumb.text %}{{ thumb.text | markdownify }}{% endif %}
+			</div>
 		</div>
-	</li>
-{% endfor %}
-</ul>
+	</div>
+	{% endfor %}
+</div>
+
+{% assign thumbnails = nil %}

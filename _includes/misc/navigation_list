@@ -1,0 +1,105 @@
+{% comment %}<!--
+The pages_list include is a listing helper.
+Usage:
+  1) assign the 'pages_list' variable to a valid array of pages or posts.
+  2) include JB/pages_list
+  example:
+    <ul>
+  	  {% assign pages_list = site.pages %}
+  	  {% assign group = 'navigation' %}  
+  	  {% include misc/navigation_list %}
+  	</ul>
+  	
+  Grouping: (optional): 
+  	assign the 'group' variable to constrain the list to only pages/posts
+  	in the given group. Note you must define the group manually in the page/post
+  	meta-data to use this feature.
+  	Grouping is mainly helpful for non-post pages.
+  	If you want to group posts, it's easier/better to tag them, then pass the tagged posts array.
+  	i.e. site.tags.cool_tag (this returns an array of posts tagged: cool_tag)
+  	
+  This helper can be seen in use at: ../_layouts/default.html
+-->{% endcomment %}
+  {% for order in site.custom_settings.navigation_order %}
+  	{% if order.page != 'custom_page' and order.page != 'start_dropdown' and order.page != 'end_dropdown' and order.page != 'menu_separator' %}
+  		{% assign navigation_order = navigation_order | append: ' ' | append: order.page %}
+  	{% endif %}
+  {% endfor %}
+  
+  {% for node in pages_list %}
+	{% assign url_parts = node.url | remove: '/index.html' | split: '/' %}
+	{% assign file = url_parts | last %}
+	{% assign num_parts = url_parts | size %}
+	{% if num_parts == 2 %} {% assign file = file | remove: ".html" %} {% endif %}
+	{% if navigation_order contains file or node.url == "/index.html" %}
+		{% assign navigation_href = navigation_href | append:'|' | append:node.url %}
+		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
+		{% assign navigation_file = navigation_file | append:'|' | append:file %}
+	{% endif %}
+	{% if site.custom_settings.extensions.active == true and node.extensions-home == true %}{% assign extensions_node = node %}{% endif %}
+  {% endfor %}
+  
+  {% if site.custom_settings.extensions.active == true && extensions_node %}
+	{% assign extensions_file = extensions_node.url | remove: '/index.html' | split: '/' | last %}
+	{% assign extensions_first = extensions_node.order | split: ' ' | first %}
+	{% for node in pages_list %}
+		{% assign node_first = node.url | remove: '/index.html' | split: '/' | last %}
+		{% if node_first == extensions_first %}
+			{% assign extensions_url = node.url %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+  {% endif %}
+  
+  {% assign navigation_href_arr = navigation_href | split: '|' %}
+{% assign navigation_titles_arr = navigation_titles | split: '|' %}
+{% assign navigation_file_arr = navigation_file | split: '|' %}
+
+{% assign dropdown_started = false %}
+{% for node_order in site.custom_settings.navigation_order %}
+	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}{% assign icon = nil %}{% assign hidden_sm = false %}
+	{% if node_order.page == 'start_dropdown' %}
+		{% assign dropdown_started = true %}
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ node_order.title }} <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+	{% elsif node_order.page == 'end_dropdown' %}
+		{% assign dropdown_started = false %}
+		</ul>
+	</li>
+	{% elsif node_order.page == 'menu_separator' %}
+		<li class="divider"></li>
+	{% elsif node_order.page == 'custom_page' %}
+		{% assign node_url = node_order.link %}
+		{% assign title = node_order.title %}
+		{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
+		{% if node_order.hidden_sm == true %}{% assign hidden_sm = true %}{% endif %}
+	{% else %}
+		{% for node in navigation_file_arr %}
+			{% if node == node_order.page or (node_order.page == 'home' and navigation_href_arr[forloop.index0] == '/index.html') %}
+				{% assign node_url = navigation_href_arr[forloop.index0] %}{% assign title = navigation_titles_arr[forloop.index0] %}
+				{% if node_url == page.url %}{% assign active=true %}
+				{% elsif node_order.page == site.custom_settings.paginate_for and page.url contains "/page" %}{% assign active=true %}
+				{% elsif node_order.page == site.custom_settings.blog.blog_name and page.url contains site.custom_settings.blog.blog_path %}{% assign active=true %}
+				{% elsif site.custom_settings.extensions.active == true and node == extensions_file %}{% unless page.url contains site.custom_settings.blog.blog_path %}
+					{% assign node_url = extensions_url %}
+					{% if page.id or page.parent-id or page.extensions-home %}
+						{% assign active = true %}
+					{% endif %}
+				{% endunless %}{% endif %}
+				{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
+				{% if node_order.hidden_sm == true %}{% assign hidden_sm = true %}{% endif %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+	{% if title %}
+	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %} title="{{ title }}">{% if icon contains "glyphicon-" %}<span class="glyphicon {{ icon }}"></span>{% elsif icon contains "fa-" %}<i class="fa {{ icon }} fa-lg"></i>{% endif %}{% if hidden_sm == true %}<span class="hidden-sm">{% endif %} {{title}} {% if hidden_sm == true %}</span>{% endif %}</a></li>
+	{% endif %}
+{% endfor %}
+{% if dropdown_started == true %}
+		</ul>
+	</li>
+{% endif %}
+
+{% assign pages_list = nil %}{% assign group = nil %}

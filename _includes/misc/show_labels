@@ -13,13 +13,13 @@ Usage:
 -->{% endcomment %}
 {% include defs/labels_definition %}
 {% if page_labels %}
-    <ul class="breadcrumb rate_button">
-	    <li class="active"><i class="icon-tags">&nbsp;</i> Labels:</li>
+    <ul class="breadcrumb breadcrumb-no-separator rate_button">
+	    <li class="active"><span class="glyphicon glyphicon-tags">&nbsp;</span> Labels:</li>
 	    {% for label_code in page_labels %}
 	    <li><span class="label label-{{ label_code }}">{% for label in labels_code %}{% if label_code == label %}{{ labels_name[forloop.index0] }}{% endif %}{% endfor %}</span></li>
 	    {% endfor %}
 	    {% if rate_url %}
-	    <li class="pull-right"><a class="btn btn-success" href="{{ rate_url }}#disqus_thread"><i class="icon-comment icon-white"></i> Rate &amp; Discuss This Concept!</a></li>
+	    <li class="pull-right"><a class="btn btn-success" href="{{ rate_url }}#disqus_thread"><span class="glyphicon glyphicon-comment"></span> Rate &amp; Discuss This Concept!</a></li>
 	    {% endif %}
 	 </ul>
 {% endif %}

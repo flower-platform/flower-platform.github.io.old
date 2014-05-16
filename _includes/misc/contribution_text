@@ -1,0 +1,2 @@
+This website is a <a href="{{ site.github_page }}">public GitHub repository</a>.
+You can also contribute by forking the project and add to it.

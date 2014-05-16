@@ -1,13 +1,13 @@
 {% assign concept-tab-assigned = false %}
 {% comment %} Search for the concept home (needs to be lit for every concept page {% endcomment %}
 {% for node in pages_list %}
-	{% if node.concepts-home == true %}
-		{% assign concepts-home = node %}
+	{% if node.extensions-home == true %}
+		{% assign extensions-home = node %}
 	{% endif %}
 {% endfor %}
-{% comment %} Find the first tab from concept home so that we place the url instead of concepts-home {% endcomment %}
-{% if concepts-home %}
-	{% assign first_tab_name = concepts-home.order | split:' ' | first %}
+{% comment %} Find the first tab from concept home so that we place the url instead of extensions-home {% endcomment %}
+{% if extensions-home %}
+	{% assign first_tab_name = extensions-home.order | split:' ' | first %}
 	{% for node in pages_list %}
 		{% assign current_node_name = node.url | remove: '/index.html' | split:'/' | last %}
 		{% if current_node_name == first_tab_name and node.id %}
@@ -19,7 +19,7 @@
 	{% if node.title != null %}
 	  {% if group == null or group == node.group %}
 		{% assign title = node.title %}
-		{% comment %} <!-- We want here to show the Concepts clicked for all the pages that have concept-tab-id -->{% endcomment %}
+		{% comment %} <!-- We want here to show the Extensions clicked for all the pages that have concept-tab-id -->{% endcomment %}
 		
 		{% assign has_page_in_name = false %}
 		{% capture url_no_page %}{{ node.url | replace:'/page':'' }}{% endcapture %}
@@ -37,12 +37,12 @@
 			{% if page_first_url_part == 'blog' and node_first_url_part == 'blog' %}
 				{% assign active = true %}
 			{% endif %}
-			{% if concepts-home.url == node.url and page_first_url_part != 'blog' %}
-				{% if page.id or page.parent-id or page.concepts-home %}
+			{% if extensions-home.url == node.url and page_first_url_part != 'blog' %}
+				{% if page.id or page.parent-id or page.extensions-home %}
 					{% assign active = true %}
 				{% endif %}
 			{% endif %}
-			{% if node.concepts-home %}
+			{% if node.extensions-home %}
 				{% assign node_url = concept_redirect_url | remove: '/index.html' %}
 			{% else %}
 				{% assign node_url = node.url %}

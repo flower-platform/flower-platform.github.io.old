@@ -1,0 +1,77 @@
+{% comment %}<!--
+The sidebar shows the right sidebar with the latest posts tags and contribution boxes.
+Usage:
+  1) assign sidebar_tags to a valid arrays of tags, or nothing if you want the current page tags
+  2) set the variable sidebar_show_tags if you want the tags to be shown
+  3) set the variable sidebar_posts_no if you want a different number of latest posts than the default
+  4) set the sidebar_show_recent_posts if you want the recent posts to be shown
+  5) set the sidebar_show_contribution is you want the misc/contribution to be shown
+  6) set the sidebar_show_tag_cloud to true if you want the tag cloud to be shown
+  7) include misc/sidebar
+  example:
+      {% assign sidebar_categories = site.categories %}
+	  {% assign sidebar_show_categories = true %}
+  	  {% assign sidebar_tags = site.tags %}
+  	  {% assign sidebar_show_tags = true %}
+  	  {% assign sidebar_posts_no = 5 %}
+  	  {% assign sidebar_show_recent_posts = true %}
+  	  {% assign sidebar_show_contribution = true %}
+  	  {% assign sidebar_show_tag_cloud = true %} 
+  	  {% include misc/sidebar %}
+  	  
+-->{% endcomment %}
+
+		{% unless site.categories == empty or sidebar_show_categories != true %}
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title"><strong>Categories</strong></h3></div>
+			<ul class="list-group">
+				{% assign categories_list = sidebar_categories %}  
+  	  			{% include JB/categories_list %}
+			</ul>
+		</div>
+
+		
+		{% endunless %}
+
+		{% unless sidebar_show_tags != true or sidebar_tags == empty %}
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title"><strong>Tags</strong></h3></div>
+			<ul class="list-group">
+				{% assign tags_list = sidebar_tags %}
+				{% include JB/tags_list %}
+			</ul>
+		</div>
+		{% endunless %}
+
+		{% unless site.posts == empty or sidebar_show_recent_posts != true %}
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title"><strong>Recent posts</strong></h3></div>
+			<div class="list-group">	
+		      {% assign latest_posts = site.posts %}
+		      {% if sidebar_posts_no != nil %}
+		      	{% assign posts_no = sidebar_posts_no %}
+		      {% else %}
+		  	  	{% assign posts_no = 5 %}
+		  	  {% endif %}  
+		  	  {% include misc/latest_posts %}
+		  	 </div>
+		 </div>
+		{% endunless %}
+
+		{% if sidebar_show_contribution == true %}
+	 	<div class="panel panel-default">
+	 		<div class="panel-body">
+				{% include misc/contribution_text %}
+	 		</div>
+	  	 </div>
+	  	 {% endif %}
+	  	 
+	  	 {% unless sidebar_show_tag_cloud != true or sidebar_tags == empty %}
+		<ul class="tag_cloud_box">
+			{% assign tags_list = site.tags %}
+			{% assign end-size = 35 %}
+			{% include misc/tag_cloud %}
+		</ul>	  	 
+	  	 {% endunless %}
+  	  {% assign sidebar_tags = nil %}{% assign sidebar_show_tags = nil %}{% assign sidebar_posts_no = nil %}{% assign sidebar_show_recent_posts = nil %}{% assign sidebar_show_contribution = nil %}{% assign sidebar_show_tag_cloud = nil %} 
+	  	 

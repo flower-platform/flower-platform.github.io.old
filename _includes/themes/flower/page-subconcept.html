@@ -1,25 +1,16 @@
 	<div class="page-header">
 		<h1>{{ _page_title }} {% if _page_tagline %} <small>{{ _page_tagline }}</small>{% endif %}</h1>
-	<div class="alert alert-success">
-	<strong>Concepts + Discussions = Features</strong>. The place where you <strong>learn</strong> about the concepts and features of Flower Platform.<br/>
-		The place where the <strong>community discusses and dictates</strong> the specification of Flower Platform modeling language, features and workflows.  
 	</div>
-	</div>
-<!-- 
-	<div class="page-header">
-		<h1>Concepts + Discussions = Features {% if _page_title %} <small>{{ _page_title }}</small>{% endif %}</h1>
-	</div>
- -->
  
 	{% assign pages_list = site.pages %}
 
 	{% for node in pages_list %}
-		{% if node.concepts-home == true %}
-			{% assign concepts_home = node %}
+		{% if node.extensions-home == true %}
+			{% assign extensions_home = node %}
 		{% endif %}
 	{% endfor %}
-	<ul class="nav nav-tabs">
-	{% assign tab_order = concepts_home.order | split:' ' %}
+	<ul class="nav nav-pills">
+	{% assign tab_order = extensions_home.order | split:' ' %}
 	{% for next_tab in tab_order %}
 	{% for node in pages_list %}
 		{% assign tab_name = node.url | remove: '/index.html' | split: '/' | last %}
@@ -35,21 +26,21 @@
 	
 	<div class="tab-content">
 		<div class="tab-pane active" id="{{ _page_tab-id }}">
-			<div class="row-fluid">
-				<div class="span3 bs-docs-sidebar">
-					<ul class="nav nav-list bs-docs-sidenav" >
+			<div class="row">
+				<div class="col-sm-3 bs-docs-sidebar">
+					<ul class="nav nav-pills nav-stacked bs-docs-sidenav" >
 					{% assign page_order = _page_order | split:' ' %}
 					{% for next_node in page_order %}
 						{% for node in pages_list %}
 							{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
 							{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
-						<li><a href="#{{ node.title | replace:' ','' | replace:'.','' }}"><i class="icon-chevron-right"></i> {{ node.title }}</a></li>
+						<li><a href="#{{ node.title | replace:' ','' | replace:'.','' }}"><span class="glyphicon glyphicon-chevron-right"></span> {{ node.title }}</a></li>
 							{% endif %}
 						{% endfor %}
 					{% endfor %}					
 					</ul>
 				</div>
-				<div class="span9">
+				<div class="col-sm-9">
 				{% assign remove_string = '{' | append: '%' | append: ' include JB/setup ' | append: '%'  | append: '}' %}
 				{% for next_node in page_order %}
 					{% for node in pages_list %}
@@ -67,14 +58,14 @@
 							{% else %}
 								{{ nd_content | remove: remove_string | markdownify }}
 							{% endif %}
+							<a href="{{ node.url }}" class="btn btn-primary">More &raquo;</a>
 							<div class="breadcrumb post-share">
 							{% assign share_url = node.url %}
 							{% assign share_title = node.title %}
 							{% include misc/share %}
 							</div>
-							<a href="{{ node.url }}" class="btn btn-primary">more &rarr;</a>
 						</section>
-						<hr class="soften concepts"/>
+						<hr class="soften extensions"/>
 						{% endif %}
 					{% endfor %}
 				{% endfor %}

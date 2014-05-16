@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{% if page.url == "/index.html" %}Flower Platform{% else %}{{ page.title }} &bull; Flower Platform{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	{% assign redirect_url = nil %}
-	{% if page.redirect == true and page.concepts-home == true %}
+	{% if page.redirect == true and page.extensions-home == true %}
 		{% assign first_tab = page.order | split: ' ' | first %}
 		
 		{% for node in site.pages %}
@@ -30,21 +31,29 @@
 </script>
 	{% endif %}
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet">
-
+	<link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" title="default">
+	<link href="{{ ASSET_PATH }}/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" title="default">
+	
+	<link href="{{ ASSET_PATH }}/css/cerulean-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="cerulean">
+	<link href="{{ ASSET_PATH }}/css/cosmo-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="cosmo">
+	<link href="{{ ASSET_PATH }}/css/flatly-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="flatly">
+	<link href="{{ ASSET_PATH }}/css/journal-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="journal">
+	<link href="{{ ASSET_PATH }}/css/readable-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="readable">
+	<link href="{{ ASSET_PATH }}/css/simplex-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="simplex">
+	<link href="{{ ASSET_PATH }}/css/spacelab-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="spacelab">
+	<link href="{{ ASSET_PATH }}/css/superblue-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="superblue">
+	<link href="{{ ASSET_PATH }}/css/yeti-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="yeti">
+	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link href="{{ ASSET_PATH }}/css/responsive-video.css" rel="stylesheet" type="text/css">
-	<link href="{{ ASSET_PATH }}/css/flower.css" rel="stylesheet" type="text/css">
+	<link href="{{ ASSET_PATH }}/css/flower.css" rel="stylesheet" type="text/css" media="all">
 	<link href="{{ ASSET_PATH }}/css/colorbox.css" rel="stylesheet" type="text/css">
 	
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="{{ ASSET_PATH}}/js/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -59,29 +68,31 @@
 
   </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
-	 <a href="https://github.com/flower-platform/main"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub" class="fork_github"/></a>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	 <a href="https://github.com/flower-platform/flower-platform-4" target="_blank"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub" class="fork_github"/></a>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#flower-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</a>
-
-				<a class="brand" href="{{ HOME_PATH }}"></a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						{% assign pages_list = site.pages %}
-						{% assign current_page = page %}
-						{% include misc/navigation %}
-					</ul>
-				</div>
+				</button>
+				<a class="navbar-brand" href="{{ HOME_PATH }}"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="flower-navbar-collapse">
+				<ul class="nav navbar-nav">
+					{% assign pages_list = site.pages %}
+  	  				{% include misc/navigation_list %}
+				</ul>
 			</div>
 		</div>
-	</div>
-
+	</nav>
+	
+	{% if page.hero %}
+		{{ content }}
+	{% else %}
     <div class="container">
 		{% assign current_page = page %}
 		{% assign bread_crumbs_class = 'breadcrumb' %}
@@ -90,15 +101,16 @@
         {{ content }}
       </div>
     </div>
-
+	{% endif %}
+	
 	<footer class="footer" >
 		<div class="container">
-			<p>Find us on <a href="https://github.com/flower-platform/main" target="_blank">GitHub</a> | 
-			Follow us on <a href="http://www.twitter.com/flower_platform">Twitter</a> </p>
+			<p>Find us on <a href="https://github.com/flower-platform/flower-platform-4" target="_blank">GitHub</a> | 
+			Follow us on <a href="http://www.twitter.com/flower_platform" target="_blank">Twitter</a> </p>
 			<p>Page built with <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-			and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>. Hosted on <a href="http://pages.github.com">GitHub Pages</a>.
+			and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>. Hosted on <a href="http://pages.github.com">GitHub Pages</a>.
 			</p>
-			&copy; {{ site.time | date: '%Y' }} <a href="http://www.crispico.com">Crispico</a>
+			&copy; {{ site.time | date: '%Y' }} <a href="http://www.crispico.com" target="_blank">Crispico Software</a>
 			</p>
 		</div>
 	</footer>
@@ -110,10 +122,10 @@
 	<script src="{{ ASSET_PATH }}/js/application.js"></script>
 	{% if page.url == '/index.html' %}
 	<script type="text/javascript">
-		$('#flowerModal').on('show', function () {
+		$('#flowerModal').on('show.bs.modal', function () {
 			$('div.modal-body').html('<iframe width="853" height="480" src="//www.youtube.com/embed/IGKs9wTiHoU" frameborder="0" allowfullscreen="0"></iframe>'); 
 		});
-		$('#flowerModal').on('hide', function () {
+		$('#flowerModal').on('hide.bs.modal', function () {
 			$('div.modal-body').html('&nbsp;');  
 		});
 	</script>

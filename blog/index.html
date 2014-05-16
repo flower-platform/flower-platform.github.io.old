@@ -6,8 +6,8 @@ description: ""
 ---
 {% include JB/setup %}
 
-<div class="row-fluid">
-	<div class="span8">
+<div class="row">
+	<div class="col-sm-9">
 		{% for post in paginator.posts %}
 			<h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
 			<p class="author muted"> Posted on <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
@@ -24,58 +24,49 @@ description: ""
 			{% endif %}
 			</div>
 		
+			<div> 
+				<a href="{{ post.url }}" class="btn btn-primary">More &raquo;</a>
+			</div>
+			
 			<div class="breadcrumb post-share">
 				{% assign share_url = post.url %}
 				{% assign share_title = post.title %}
 				{% include misc/share %}
 			</div>
 		
-			<div> 
-				<a href="{{ post.url }}" class="btn btn-primary">more &rarr;</a>
-			</div>	
-			
 			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>
 		{% endfor %}
 
 		{% if paginator.total_pages > 1 %}
 		<!-- Pagination links -->
-		<div class="pagination">
-			<ul>
-				{% if paginator.previous_page %}
-				<li class="prev"><a href="{{ BASE_PATH }}/blog/{{ paginator.previous_page_path }}" title="Previous page">&larr;</a></li>	
-				{% else %}
-				<li class="prev disabled"><a title="Previous page">&larr;</a></li>
-				{% endif %}
-				{% for i in (1..paginator.total_pages) %}
-					{% assign page-path = "/blog" %}
-					{% if i > 1 %}{% assign page-path = page-path | append:"/page" | append:i %}{% endif %}
-				<li {% if paginator.page == i %}class="active"{% endif %}>
-					<a {% if paginator.page != i %}href="{{ page-path }}"{% endif %}>{{ i }}</a>
-				</li>
-				{% endfor %}
-				{% if paginator.next_page %}
-				<li class="next"><a href="{{ BASE_PATH }}/blog/{{ paginator.next_page_path }}" title="Next page">&rarr;</a></li>
-				{% else %}
-				<li class="next disabled"><a title="Next page">&rarr;</a></li>
-				{% endif %}
-			</ul>
-		</div>
+		<ul class="pagination">
+			{% if paginator.previous_page %}
+			<li class="prev"><a href="{{ BASE_PATH }}{{ paginator.previous_page_path }}" title="Previous page">&larr;</a></li>	
+			{% else %}
+			<li class="prev disabled"><a title="Previous page">&larr;</a></li>
+			{% endif %}
+			{% for i in (1..paginator.total_pages) %}
+				{% assign page-path = "/blog" %}
+				{% if i > 1 %}{% assign page-path = page-path | append:"/page" | append:i %}{% endif %}
+			<li {% if paginator.page == i %}class="active"{% endif %}>
+				<a {% if paginator.page != i %}href="{{ page-path }}"{% endif %}>{{ i }}</a>
+			</li>
+			{% endfor %}
+			{% if paginator.next_page %}
+			<li class="next"><a href="{{ BASE_PATH }}{{ paginator.next_page_path }}" title="Next page">&rarr;</a></li>
+			{% else %}
+			<li class="next disabled"><a title="Next page">&rarr;</a></li>
+			{% endif %}
+		</ul>
 		{% endif %}
 		
 	</div>
-	<div class="span4">
-		<h4>Categories</h4>
-		<ul>
-			{% for cat in site.categories %}
-			<li><a href="categories.html#{{ cat | first }}-ref">{{ cat | first }}</a>
-			{% endfor %}
-		</ul>
-		<hr class="soften post"/>
-		<h4>Tags</h4>
-		<ul class="tag_cloud_box">
-			{% assign tags_list = site.tags %}
-			{% assign end-size = 35 %}
-			{% include misc/tag_cloud %}
-		</ul>
+	<div class="col-sm-3">
+		{% assign sidebar_categories = site.categories %}
+		{% assign sidebar_show_categories = false %}
+		{% assign sidebar_posts_no = 5 %}
+		{% assign sidebar_show_recent_posts = true %}
+		{% assign sidebar_show_tag_cloud = true %} 
+		{% include misc/sidebar %}
 	</div>
 </div>

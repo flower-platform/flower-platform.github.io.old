@@ -5,5 +5,15 @@ header : Post Archive
 ---
 {% include JB/setup %}
 
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+<div class="row">
+	<div class="col-sm-9">
+		{% assign posts_collate = site.posts %}
+		{% include JB/posts_collate %}
+	</div>
+	<div class="col-sm-3">
+		{% assign sidebar_posts_no = 5 %}
+		{% assign sidebar_show_recent_posts = true %}
+		{% assign sidebar_show_tag_cloud = true %} 
+		{% include misc/sidebar %}
+	</div>
+</div>

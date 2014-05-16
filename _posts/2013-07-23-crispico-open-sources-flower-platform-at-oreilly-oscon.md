@@ -18,6 +18,7 @@ tags: [events, news]
 
 ## Context
 **Flower Platform** is a web based diagramming software, with a strong focus on source code. Users can create diagrams (UML-like):
+
 * which are **synchronized** with the actual source code (e.g. from Git, SVN),
 * on which they **collaborate** in real-time.
  
@@ -84,6 +85,7 @@ renamed to "Flower Platform", as the team thinks it describes better the charact
 </p>
 
 **Notable features** of Flower Platform:
+
 * Import source code from Git and SVN
 * Create models and diagrams (UML/class diagrams like), based on source code
 * Advanced code synchronization technology (named "CodeSync") that limits the possibility of conflicts when modifying the diagrams and code at the same time
@@ -95,6 +97,7 @@ renamed to "Flower Platform", as the team thinks it describes better the charact
 
 Since March 11, 2013, the Flower Platform team is working actively on the next major version **Flower Platform v2**. 
 **Notable features** that are currently being worked on (some of them will be demonstrated at OSCON):
+
 * support for tablet and mobile devices
 * support for more programming languages: e.g. Python, JavaScript. Investigations and discussions are held regarding the possibility of supporting functional programming
 languages (e.g. Scala, Clojure)
@@ -105,7 +108,7 @@ languages (e.g. Scala, Clojure)
 
 ### Crispico
 
-[Crispico] (http://www.crispico.com) (full name: Crispico Resonate MP4 SRL), based in Romania, branch of the [Resonate MP4 Group] (http://www.resonate-mp4.com)
+[Crispico](http://www.crispico.com) (full name: Crispico Resonate MP4 SRL), based in Romania, branch of the [Resonate MP4 Group](http://www.resonate-mp4.com)
 (based in France) has been founded in 2005, and specializes in building 
 mission critical software for the airport business.
 

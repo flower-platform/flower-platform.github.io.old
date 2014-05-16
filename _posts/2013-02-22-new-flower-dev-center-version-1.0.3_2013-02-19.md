@@ -22,6 +22,7 @@ We are even happier to see the first users and open source projects added in Flo
 * Dock/Undock Mechanism for windows
 
 # Bugs Fixed
+
 ## CodeSync & Model Related
 
 * Solved many ActionScript/MXML code synchronization issues. Among them: support for lines that are not terminated with ; and attributes that are initialized with blocks

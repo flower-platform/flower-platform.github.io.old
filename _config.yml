@@ -1,21 +1,21 @@
 # This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /blog/:categories/:year/:month/:day/:title 
+# For more see: http://jekyllrb.com/docs/permalinks/
+permalink: /blog/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
 pygments: true
 paginate: 8 # No of pages
 paginate_path: "/blog/page:num"
+markdown: kramdown
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 title : Flower Platform
-tagline: The Open Source Modeling Platform
+tagline: Smart mind maps and diagrams for developers
 author :
   name : Flower Platform Team
-  email : flower_platform_team@flower_platform.org
+  email : contact@crispico.com
   github : flower-platform
   twitter : flower_platform
   feedburner : 
@@ -28,7 +28,69 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://flower-platform.org
+production_url : http://mircea-negreanu.github.io
+
+custom_settings:
+  # Navigation_order
+  # Page types:
+  #		home - homepage
+  #		custom_page - page that is not defined in the site and will go to
+  # 		external link when pressed
+  #		start_dropdown - indicates that from here own the following elements
+  #			will be put in a drop down
+  #		end_dropdown - indicates the the dropdown will be closed, and the following
+  #			menu elements will be put naturally on the same line
+  #		menu_separator - for a page in a dropdown, will draw a separator
+  #	Values:
+  #		page - the name of the page (the file index, or - for folders that will be 
+  #			generated with a index.html inside - the name of the folder)
+  #		icon - the icon (recognizable are only glyphicon- and fa-)
+  #		title - the title for menu (for custom_pages or start_dropdown)
+  #		link - url to go to for custom_page
+  #		hidden_sm - when the ecran becomes smaller, in order not to 
+  #		 wrap on multiple pages, only the icon will be shown			
+  navigation_order:
+    -
+      page: home
+      icon: fa-home
+      hidden_sm: true
+    -
+      page: extensions
+      icon: fa-cogs
+    -
+      page: screenshots
+      icon: fa-camera
+    -
+      page: download
+      icon: fa-download
+    -
+      page: blog
+      icon: fa-pencil-square-o
+      hidden_sm: true
+    -
+      page: custom_page
+      link: http://hub.flower-platform.com
+      title: Flower Platform Hub
+      icon: fa-cloud
+    
+  # 
+  # What link to be active when we are on a blog
+  # blog_name - the page to be active
+  # blog_path - the path that tells us we are on a blog page 
+  #
+  blog:
+    blog_name: blog
+    blog_path: /blog/
+  # 
+  # What link to be active when the pagination (/page) is encontered
+  #  
+  paginate_for: blog
+  #
+  # If the extensions is active and what is the base path for them
+  #
+  extensions:
+    active: true
+    name: extensions
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -79,6 +141,12 @@ JB :
   rss_path : /rss.xml
   
   pages_list:
+    provider: custom
+
+  tags_list:
+    provider: custom
+    
+  categories_list:
     provider: custom
 
   # Settings for comments helper

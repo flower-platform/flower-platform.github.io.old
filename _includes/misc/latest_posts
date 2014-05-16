@@ -1,0 +1,19 @@
+{% comment %}<!--
+The latest_posts from the right side bar
+
+Usage:
+  1) assign the 'posts_no' variable to a valid number.
+  2) include misc/latest_posts
+  example:
+    <div>
+      {% assign latest_posts = site.posts %}
+  	  {% assign posts_no = 10 %}  
+  	  {% include misc/latest_posts %}
+  	</div>
+  	
+  This helper can be seen in use at: ../_layouts/blog_index.html
+-->{% endcomment %}
+{% for node in latest_posts limit:posts_no %}
+	<a href="{{ BASE_PATH }}{{ node.url }}" class="list-group-item {% if node.url == page.url %}active{% endif %}">{{ node.title }}</a>
+{% endfor %}
+{% assign latest_posts = nil %} {% assign latest_posts = nil %}
