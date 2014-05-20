@@ -34,7 +34,7 @@
 						{% for node in pages_list %}
 							{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
 							{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
-						<li><a href="#{{ node.title | replace:' ','' | replace:'.','' }}"><span class="glyphicon glyphicon-chevron-right"></span> {{ node.title }}</a></li>
+						<li><a href="#{{ node.title | replace:' ','' | replace:'.','' | replace:',','' }}"><span class="glyphicon glyphicon-chevron-right"></span> {{ node.title }}</a></li>
 							{% endif %}
 						{% endfor %}
 					{% endfor %}					
@@ -46,7 +46,7 @@
 					{% for node in pages_list %}
 						{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
 						{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
-						<section id="{{ node.title | replace:' ','' | replace:'.':'' }}">
+						<section id="{{ node.title | replace:' ','' | replace:'.':'' | replace:',',''}}">
 							<a href="{{node.url}}"><h1>{{node.title}}</h1></a>
 							{% assign page_labels = node.labels %}
 							{% assign rate_url = node.url %}

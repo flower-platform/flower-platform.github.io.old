@@ -178,5 +178,23 @@ December 2, 2013: Crispico decides once again to perform a major rewrite, becaus
 * Slight strategy shift. We decided to focus more on representing data as mind maps rather than diagrams. We find that mind maps are somehow between a text editor (rather key oriented) and a diagram (rather mouse oriented) and they offer better productivity for developers.
 </div>
 
+# News
+
+<hr/>
+
+<div class="row">
+<div class="col-md-6">
+<a class="twitter-timeline"  href="https://twitter.com/flower_platform"  data-widget-id="468718341687754754" height="300">Tweets by @flower_platform</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+<div class="col-md-6">
+  	  {% assign sidebar_posts_no = 5 %}
+  	  {% assign sidebar_show_recent_posts = true %}
+  	  {% include misc/sidebar %}
+</div>
+</div>
+
 </div><!-- .content -->
 </div><!-- .container -->
+
