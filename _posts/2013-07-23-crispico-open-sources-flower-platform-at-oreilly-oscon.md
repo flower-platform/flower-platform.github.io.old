@@ -14,7 +14,7 @@ tags: [events, news]
 
 **Flower Platform** participates as an exhibitor at O'Reilly OSCON (**Innovator's Pavilion, booth P14**).
 
-<img class="img-polaroid" style="float:right" src="/screenshots/news_release_zoom-on-class-with-documentation.png"/>
+<img class="img-polaroid" style="float:right" src="/screenshots/fp2/news_release_zoom-on-class-with-documentation.png"/>
 
 ## Context
 **Flower Platform** is a web based diagramming software, with a strong focus on source code. Users can create diagrams (UML-like):
@@ -81,7 +81,7 @@ and their workflows.
 renamed to "Flower Platform", as the team thinks it describes better the characteristics of the product.
 
 <p class="text-center">
-<img class="img-polaroid" src="/screenshots/zoom-on-classes-without-doc.png"/>
+<img class="img-polaroid" src="/screenshots/fp2/zoom-on-classes-without-doc.png"/>
 </p>
 
 **Notable features** of Flower Platform:
