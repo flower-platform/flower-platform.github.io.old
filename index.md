@@ -129,6 +129,21 @@ Collaborate in real time on [Freeplane](http://freeplane.sourceforge.net/) (or [
 
 <p><a class="btn btn-default" href="extensions/mind-map" role="button">More &raquo;</a></p>
 </div>
+
+<div class="col-md-4" markdown="1">
+## Arduino
+
+<img class="img-thumbnail center-block" src="extensions/arduino/logo_flower-platform-arduino.png"/>
+
+Graphical development environment that generates code for the [Arduino](http://arduino.cc) platform.
+
+Intended for people with no (or little) programming knowledge. 
+
+This [blog post](/blog/2014/06/11/bootstrapping-flower-platform-arduino-extension-meet-candy-robot-v1/) provides more info about the ambitions of this extension.
+
+<p><a class="btn btn-default" href="extensions/arduino" role="button">More &raquo;</a></p>
+</div>
+
 <div class="col-md-4" markdown="1">
 ## More Extensions
 

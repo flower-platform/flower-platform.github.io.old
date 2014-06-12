@@ -74,6 +74,12 @@ custom_settings:
       open_in_new_tab: true
       title: Flower Platform Hub
       icon: fa-cloud
+    -
+      page: custom_page
+      link: "#social-links"
+      title: <i class="fa fa-github fa-lg"></i><i class="fa fa-twitter fa-lg"></i><i class="fa fa-facebook fa-lg"></i>
+      no_title_in_link: true
+      
     
   # 
   # What link to be active when we are on a blog
@@ -160,7 +166,6 @@ JB :
     #provider: false
     disqus :
       short_name : flower-platform
-      #short_name: jekyllbootstrap
     livefyre :
       site_id : 123
     intensedebate :
