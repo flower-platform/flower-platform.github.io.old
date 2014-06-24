@@ -26,11 +26,3 @@ To **un-select** a selected node(s), click outside the node, in an empty place o
 
 Keep ``Shift`` pressed if you want to append selected node to current selection. <br>
 Keep ``Ctrl`` pressed if you want to remove a selected node from current selection, 
-
-## Select using the arrow keys
-
-Use the arrow keys to move the selection from one node to the other based on the direction of the arrows.
-
-## Select first/last sibling
-
-Use ``Page Up``/``Page Down`` to select the first/last sibling of the currently selected node.
