@@ -41,25 +41,27 @@ jekyll serve --watch
 
 The site should now be available at [http://localhost:4000](http://localhost:4000).
 
-A couple of userful commands (although creation by copy/paste is also possible). To add a new post 
+A couple of userful commands (although creation by copy/paste is also possible). To add a new post:
 
 ```
 rake post title="Title of post" tags=[tag1, tag2]
 ```
     
-To add a new page:
+To add a new page, copy/paste/rename from an existing one or:
 	
 ```
 rake page name="page_name.md"
 ```
 
+**Hint:** when you edit a page, jekyll automatically regenerates the corresponding pages (thanks to the ``--watch`` option). This process takes a couple of seconds. My advice is to resize the console window in order to make it very small (e.g. height = 1 or 2 lines of text), and to keep it on top (i.e. don't cover it with your browser, editor or other windows). This way, you see exactly when jekyll has finished regenerating the pages, and you can refresh (F5) in your browser to see the changes.
+
 # Hints on Editing (Markdown Syntax, Bootstrap, Etc.)
 
 I recommend the following links:
+* http://getbootstrap.com/ - Reference Doc for the Bootstrap framework 
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 * https://daringfireball.net/projects/markdown/ - The official guide, although I find it less readable than the above.
 * http://kramdown.gettalong.org/syntax.html - The description of the syntax (differences and enhancements from the standard markdown) that is offered by **kramdown** (the markdown parser used by this site).
-* http://getbootstrap.com/ - Reference Doc for the Bootstrap framework 
 
 ## Mixing HTML and Markdown
 
@@ -90,4 +92,10 @@ Hello **world**.
 <div markdown="1" class="...">Hello **world**.</div>
 ```
 
+# Useful HTML Templates
+
+```html
+<!-- centered image -->
+<img class="img-thumbnail center-block" src="..."/>
+```
 
