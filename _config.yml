@@ -65,6 +65,9 @@ custom_settings:
       page: download
       icon: fa-download
     -
+      page: practices
+      icon: fa-code
+    -
       page: blog
       icon: fa-pencil-square-o
       hidden_sm: true
