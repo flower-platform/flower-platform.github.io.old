@@ -96,10 +96,7 @@ Hello **world**.
 <div markdown="1" class="...">Hello **world**.</div>
 ```
 
-# Useful HTML Templates
+## Conventions by Example
 
-```html
-<!-- centered image -->
-<img class="img-thumbnail center-block" src="..."/>
-```
-
+* [Centered Image, Shortcut Label, Hint Label](practices/eclipse-productivity/generate-getters-setters.md)
+* [Image Right Aligned + Wordwrap](extensions/mind-map/overview.html) 
