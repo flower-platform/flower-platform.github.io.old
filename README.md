@@ -99,4 +99,4 @@ Hello **world**.
 ## Conventions by Example
 
 * [Centered Image, Shortcut Label, Hint Label](practices/eclipse-productivity/generate-getters-setters.md)
-* [Image Right Aligned + Wordwrap](extensions/mind-map/overview.html) 
+* [Image Right Aligned + Wordwrap](extensions/mind-map/overview.md) 
