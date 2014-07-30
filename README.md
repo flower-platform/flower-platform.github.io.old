@@ -100,5 +100,5 @@ Hello **world**.
 
 Click on link and then on "Raw" or "Edit" to view source.
 
-* [Centered Image, Shortcut Label, Hint Label](practices/eclipse-productivity/generate-getters-setters.md)
+* [Centered Image, Shortcut Label, Alert for Hint](practices/eclipse-productivity/generate-getters-setters.md)
 * [Image Right Aligned + Wordwrap](extensions/mind-map/overview.md) 
