@@ -3,7 +3,7 @@ layout: page
 group: subconcept
 parent-id: git
 
-title: "What is a Git Repository?"
+title: "What is a Git Repository"
 #tagline: "tagline"
 comments: true
 share: true
@@ -14,10 +14,20 @@ share: true
 ---
 {% include JB/setup %}
 
-o BD de commituri. Cu pointeri (branch). Distribuit: toata lumea are tot.
-si in ac. timp un repo e si un WD, adica un snapshot corespunzator in general uneia dintre branch.
-Aceasta se numeste branch checked out: numai una poate fi checked out.
+**Git** is a distributed version control system which consists of a database of **commits**. When working with Git and want to create a **new project** we shouldn't put it in the **workspace** but in a different place (``e.g. D:\data\git\flower-platform.github.io``). In this case, the workspace is used by Eclipse only to keep the **metadata**.
 
-Eclipse isi tine in Wspace, dar git sta in alta parte. ...
+A **Git repository** is stored in a directory called ``.git.`` The projects from the same directory as ``.git`` represents the **working directory** which stores the appropriate files of a **branch** (A branch in Git is a reference to a commit). This is a **checked out branch**. 
 
-2) Cloning a Git Repo. Checking Out Branches 
+There are two types of branches: **locals and remotes**.
+
+<p class="text-center">
+<img class="img-thumbnail" src="local-checkedout-branch.PNG"/>
+<img class="img-thumbnail" src="another-local-checkedout-branch.PNG"/>
+</p>
+<img class="img-thumbnail center-block" src="remote-checkedout-branch.PNG"/>
+
+We always work on a **local branch** (the checked out branch). Only **one** branch could be checked out **at a time**.
+
+<div class="alert alert-danger"><strong>We could checkout a remote branch to take a look, but we cannot modify it!</strong></div>
+
+We can **create** a local branch either from a remote branch or from an existing local branch. (right click on a branch and then choose **Create Branch...**). We have to give a **name** and select whether the **newly created branch** should be checked out.
