@@ -4,9 +4,17 @@
  
 	{% assign pages_list = site.pages %}
 
+	{% assign sub_page_url_part = page.url | remove: '/index.html' | split: '/' | last %}
+	{% assign url_to_remove = '/' | append: sub_page_url_part | append: '/index.html' %}
+	{% assign sub_page_extension_url = page.url | remove: url_to_remove %}{% assign sub_page_url_part = nil %}{% assign url_to_remove = nil %}
+	
 	{% for node in pages_list %}
 		{% if node.extensions-home == true %}
-			{% assign extensions_home = node %}
+			{% assign extension_url = node.url | remove: '/index.html' %}
+			{% if sub_page_extension_url == extension_url %}
+				{% assign extensions_home = node %}
+				{% break %}
+			{% endif %}
 		{% endif %}
 	{% endfor %}
 	<ul class="nav nav-pills">
