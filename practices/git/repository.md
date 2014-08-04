@@ -28,6 +28,4 @@ There are two types of branches: **locals and remotes**.
 
 We always work on a **local branch** (the checked out branch). Only **one** branch could be checked out **at a time**.
 
-<div class="alert alert-danger"><strong>We could checkout a remote branch to take a look, but we cannot modify it!</strong></div>
-
-We can **create** a local branch either from a remote branch or from an existing local branch. (right click on a branch and then choose **Create Branch...**). We have to give a **name** and select whether the **newly created branch** should be checked out.
+<div class="alert alert-danger"><strong>Attention:</strong> We could checkout a remote branch to take a look, but we cannot modify it!</div>
