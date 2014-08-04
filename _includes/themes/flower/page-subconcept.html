@@ -35,9 +35,10 @@
 	<div class="tab-content">
 		<div class="tab-pane active" id="{{ _page_tab-id }}">
 			<div class="row">
+			{% assign page_order = _page_order | split:' ' %}
+			{% if page.left-navigation != false %}
 				<div class="col-sm-3 bs-docs-sidebar">
 					<ul class="nav nav-pills nav-stacked bs-docs-sidenav" >
-					{% assign page_order = _page_order | split:' ' %}
 					{% for next_node in page_order %}
 						{% for node in pages_list %}
 							{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
@@ -48,7 +49,12 @@
 					{% endfor %}					
 					</ul>
 				</div>
+
 				<div class="col-sm-9">
+				{% else %}
+				<div class="col-sm-12">
+				{% endif %}
+				
 				{% assign remove_string = '{' | append: '%' | append: ' include JB/setup ' | append: '%'  | append: '}' %}
 				{% for next_node in page_order %}
 					{% for node in pages_list %}
