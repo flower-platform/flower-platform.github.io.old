@@ -14,7 +14,7 @@ However, for serious content update, a local jekyll & friends system needs to be
 
 For a Win 32/64 environment, here are the steps.
 
-* Install Ruby from [here](http://rubyinstaller.org/downloads/). Version 1.9.3 is recommended for Win, because newer versions have small issues (e.g. not all plugins available/compiled, etc.). E.g. put it here: `c:\Ruby193`
+* Install Ruby from [here](http://rubyinstaller.org/downloads/). Version 1.9.3 is recommended for Win, because newer versions have small issues (e.g. not all plugins available/compiled, etc.). E.g. put it here: `c:\Ruby193`. **Don't forget** to check the box that adds Ruby to the **PATH** environment variable.
 * Install Development Kit, from the same location as above. E.g. put it here: `c:\Ruby193\ruby-dev-kit`
 * From the directory above, run the following commands (cf. the [DevKit tutorial](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)):
 ```
@@ -24,9 +24,6 @@ ruby dk.rb install
 * Install Jekyll cf. the [GitHub Pages doc](https://help.github.com/articles/using-jekyll-with-pages) / Step 2:
 ```
 gem install bundler
-```
-* Cf. step 3 of the above doc: a ``Gemfile`` should already exist in the repo root (so you don't need to create it). It should point to the required dependencies/versions, as they are [installed on GitHub Pages](https://pages.github.com/versions/). Run:
-```
 gem install github-pages
 gem install wdm
 ```
