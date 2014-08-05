@@ -29,7 +29,7 @@ A tag can be seen like a label for a commit, because it contains a name (e.g. ``
 
 To create a new tag, we must perform the following steps:
 
-* <span class="text-success"><i>Switch to the [Git perspective](../eclipse-productivity/generate-getters-setters.html)</i></span> in the Eclipse IDE.
+* <span class="text-success"><i>Switch to the [Git perspective](git-perspective.html)</i></span> in the Eclipse IDE.
 
 * <span class="text-success"><i>Double click on the repository</i></span> where we want to create the tag. After that operation, we will obtain the following hierarchy:
 	<img class="img-thumbnail center-block" src="creatingTags-RepoHierarchy.png"/>
@@ -46,7 +46,7 @@ To create a new tag, we must perform the following steps:
 		
 <div class="alert alert-warning"><strong>Warning!</strong> If we create a tag using the method presented above, then the commit identified by the new tag will be the commit which is the HEAD of the selected branch. <b>To create a tag for a specific commit:</b>
 	<ul>
-		<li class="circle">In the <a href="../eclipse-productivity/generate-getters-setters.html">Git perspective</a>, <i>switch</i> to the <a href="../eclipse-productivity/generate-getters-setters.html">History view</a>;</li>
+		<li class="circle">In the <a href="git-perspective.html">Git perspective</a>, <i>switch</i> to the <a href="history.html">History view</a>;</li>
 		<li class="circle"><i>Right click on the desired commit</i> and select <span class="label label-success">Create Tag...</span>.</li>
 	</ul>
 The next steps are those that we have already discussed.</div>
