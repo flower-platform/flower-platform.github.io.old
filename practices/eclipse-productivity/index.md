@@ -3,6 +3,6 @@ layout: page-subconcept
 title: "Eclipse Productivity"
 tagline: "Hints on how to be productive using the Eclipse IDE"
 id: eclipse-productivity
-order: "generate-getters-setters"
+order: "generate-getters-setters debug"
 ---
 {% include JB/setup %}
