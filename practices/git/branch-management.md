@@ -16,7 +16,7 @@ share: true
 
 We can **create** a local branch either from a remote branch or from an existing local branch. (right click on a branch and then choose **Create Branch...**). We have to give a **name** and select whether the **newly created branch** should be checked out.
 
-<img class="img-thumbnail center-block" src="branch-management-images\create-branch.png"/>
+<img class="img-thumbnail center-block" src="branch-management\create-branch.png"/>
 
 One way to add a **new branch** to a **remote repository** is to first add the branch to your local repository and then **push** that local branch to the remote repository.
 
@@ -24,4 +24,4 @@ For **deleting** a branch, we need to select *Delete Branch* from the right clic
 
 ##Prune command
 
-**'Prune' command** allows us to prune all of our local branches that track an **already-deleted remote branch**.
+<span class="label label-info">Prune</span> **command** allows us to prune all of our local branches that track an **already-deleted remote branch**.

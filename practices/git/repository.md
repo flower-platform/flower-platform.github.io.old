@@ -23,10 +23,10 @@ A **Git repository** is stored in a directory called ``.git.`` The projects from
 There are two types of branches: **locals and remotes**.
 
 <p class="text-center">
-<img class="img-thumbnail" src="repository-images\local-checkedout-branch.PNG"/>
-<img class="img-thumbnail" src="repository-images\another-local-checkedout-branch.PNG"/>
+<img class="img-thumbnail" src="repository\local-checkedout-branch.PNG"/>
+<img class="img-thumbnail" src="repository\another-local-checkedout-branch.PNG"/>
 </p>
-<img class="img-thumbnail center-block" src="repository-images\remote-checkedout-branch.PNG"/>
+<img class="img-thumbnail center-block" src="repository\remote-checkedout-branch.PNG"/>
 
 We always work on a **local branch** (the checked out branch). Only **one** branch could be checked out **at a time**.
 
