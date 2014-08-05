@@ -34,7 +34,7 @@ There are tree ways to trigger merge:
 
 Ensure that the toggle button <span class="label label-info">Show all Branches and Tags</span> is selected in the History View's toolbar. This ensures that you see the complete history of your repository in order to decide which branch you want to merge. Select the commit with the branch or tag label you want to merge and click  <span class="label label-info">Merge</span>.
 
-<img class="img-thumbnail center-block" src="merge-from-history.png"/>
+<img class="img-thumbnail center-block" src="merge/merge-from-history.png"/>
  
 #Starting merge from Team Menu
 
@@ -43,7 +43,7 @@ In the Package Explorer or Navigator, open the context menu on a project node. S
 
 Select a branch or a tag you want to merge with your current branch. This dialog also allows you to select merge squash and fast-forward options.
 
-<img class="img-thumbnail center-block" src="merge-1.png"/>
+<img class="img-thumbnail center-block" src="merge/merge-1.png"/>
 
 # Starting merge from the Git Repositories View
 

@@ -15,13 +15,13 @@ share: true
 
 Whenever you modify a file from your working directory, a <span class="label label-info"> > </span>  sign will appear in front of it in the Project Explorer/ Navigator view (it will propagate up to it`s root directory). This means that it was modified after the last commit was made.
 
-<img class="img-thumbnail center-block" src="file-modified.png"/>
+<img class="img-thumbnail center-block" src="git-staging/file-modified.png"/>
 
 <!-- more -->
 
 All the files that were modified will appear in the <span class="label label-info">Git Staging</span> view from the **Git perspective**.
 
-<img class="img-thumbnail center-block" src="git-staging-view.png"/>
+<img class="img-thumbnail center-block" src="git-staging/git-staging-view.png"/>
 
 Here they can be split into two categories:
 <ul>
@@ -31,7 +31,7 @@ Here they can be split into two categories:
 
 <div class="alert alert-success">You can <strong>drag and drop</strong> them from one category to another. Note how the file`s icon changed!</div>
 
-<img class="img-thumbnail center-block" src="git-staging-drag-and-drop.png"/>
+<img class="img-thumbnail center-block" src="git-staging/git-staging-drag-and-drop.png"/>
 
 
 <div class="alert alert-danger"><strong>Attention:</strong>The unstaged changes will not appear into the commit! So make sure that you staged all the changes that you need before committing!</div>

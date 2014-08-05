@@ -31,7 +31,7 @@ We have an ``unformatted`` source code file:
 
 After ``formatting`` the code with **Right click / Source / Format** or <span class="label label-success">(CTRL + SHIFT + F)</span>, we get:
 
-<img class="img-thumbnail center-block" src="format-code-images/sformatted.png"/>
+<img class="img-thumbnail center-block" src="format-code-images/formatted.png"/>
 
 <div class="alert alert-info"> <font size="4"><span class="label label-danger"><strong>Hint:</strong></span></font> When working on a <font color="red"><i>version control system</i></font> is really <b>indicated to format</b> only code that we added to the file, because it is possible that <i>other colleagues have formatted</i> their particular portions of the <b>source file for some reason</b>.</div>
 
