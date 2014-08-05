@@ -28,7 +28,7 @@ To reset: Right-click on the repository, choose the **reset** option, then choos
 
 <!-- more -->
 
-<img class="img-thumbnail center-block" src="reset.png"/>
+<img class="img-thumbnail center-block" src="reset-replace/reset.png"/>
 
 <div class="alert alert-danger"><strong>Attention:</strong>Reset will undo all the changes from the <strong>entire</strong> current repository!</div>
 
@@ -40,5 +40,5 @@ When you want to undo only the changes from some particular files, you can use <
 
 To replace: Right-click on the file that contains the changes you want to undo/Replace with/HEAD revision
 
-<img class="img-thumbnail center-block" src="replace.png"/>
+<img class="img-thumbnail center-block" src="reset-replace/replace.png"/>
 
