@@ -23,8 +23,8 @@ E.g. **from Eclipse:**
 
 If we already have a repository stored locally, we need to choose **Add an existing local Git...**.
 
-<img class="img-thumbnail center-block" src="clone-git-repository.png"/>
-<img class="img-thumbnail center-block" src="add-git-repository.png"/>
+<img class="img-thumbnail center-block" src="clone-git-repository-images\clone-git-repository.png"/>
+<img class="img-thumbnail center-block" src="clone-git-repository-images\add-git-repository.png"/>
 
 ## Importing projects
 
