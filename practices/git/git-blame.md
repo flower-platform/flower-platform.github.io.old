@@ -32,17 +32,17 @@ To see the authors of a certain file using git blame, we must perform the follow
 
 * <span class="text-success"><i>Right click</i></span> anywhere in the <span class="text-success"><b>Source View</b></span> and choose ``Team / Show Annotations``
 
-<img class="img-thumbnail center-block" src="gitBlame-ShowAnnotations.png"/>
+<img class="img-thumbnail center-block" src="git-blame/gitBlame-ShowAnnotations.png"/>
 <br />
 
 * <span class="text-success"><i>Select</i></span> <span class="label label-success">Ok</span> in the popup window that appears. We will see a <span class="text-success"><b>coloured rectangle</b></span> in front of every line from our file.
 
-<img class="img-thumbnail center-block" src="gitBalme-DiffReference.png"/>
+<img class="img-thumbnail center-block" src="git-blame/gitBalme-DiffReference.png"/>
 <br />
 
 * <span class="text-success"><i>Move the cursor</i></span> of the mouse <span class="text-success"><i>on the rectangle</i></span> corresponding to the line that we want to inspect. We will obtain all the <span class="text-success"><b>details</b></span> that we have been looking for, such as the author, the commit, the date modified.	
 
-<img class="img-thumbnail center-block" src="gitBlame-ShowDetails.png"/>
+<img class="img-thumbnail center-block" src="git-blame/gitBlame-ShowDetails.png"/>
 <br />
 
 <div class="alert alert-danger"><strong>Note:</strong> Notice that once we are with the cursor above a rectangle, other <b>rectangles</b> with the same color are suddenly receiving a <b>black border</b>. This means that the <b>lines</b> corresponding to those rectangles have the <b>same features</b> as the inspected line.</div>
