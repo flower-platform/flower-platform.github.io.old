@@ -18,7 +18,7 @@ share: true
 
 The <span class="label label-info">History View</span> is a commit-centric view of the resources in a given Repository.
 
-<img class="img-thumbnail center-block" src="history.png"/>
+<img class="img-thumbnail center-block" src="history/history.png"/>
 
 <!-- more -->
 
@@ -57,4 +57,4 @@ You can perform many tasks form the **History View**, such as:
 </ul>
 
 <div class="alert alert-info"><strong>Hint:</strong>It is recommended to have the <span class="label label-info">Link with Editor and Selection</span> button pressed. This way, the History View will be  synchronised with the <strong>Repositories Navigator</strong> and with the current selection from it. 
-<img class="img-thumbnail center-block" src="history-link-editor.png"/></div>
+<img class="img-thumbnail center-block" src="history/history-link-editor.png"/></div>

@@ -22,11 +22,11 @@ Because we can *easily* access a ``source code file`` without searching all proj
 
 We can use ``Open Resource`` <span class="label label-success">(CTRL + SHIFT + R)</span> :
 
-<img class="img-thumbnail center-block" src="openresource-aster.png"/>
-<img class="img-thumbnail center-block" src="openresource-ques.png"/>
+<img class="img-thumbnail center-block" src="open-resource-type-images/openresource-aster.png"/>
+<img class="img-thumbnail center-block" src="open-resource-type-images/openresource-ques.png"/>
 
 Or, if we want to search for a **type**, we use ``Open Type`` <span class="label label-success">(CTRL + SHIFT + T)</span> :
 
-<img class="img-thumbnail center-block" src="opentype-asterisk.png"/>
-<img class="img-thumbnail center-block" src="opentype-camelcase.png"/>
-<img class="img-thumbnail center-block" src="opentype-questionmark.png"/>
+<img class="img-thumbnail center-block" src="open-resource-type-images/opentype-asterisk.png"/>
+<img class="img-thumbnail center-block" src="open-resource-type-images/opentype-camelcase.png"/>
+<img class="img-thumbnail center-block" src="open-resource-type-images/opentype-questionmark.png"/>

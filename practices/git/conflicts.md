@@ -34,13 +34,13 @@ Git will tell you that you have conflicts, and will also tell you that you have 
 To fix conflicts, we will use the <span class="label label-info">merge tool</span> from Git Staing view.
 
 
-<img class="img-thumbnail center-block" src="merge-tool.png"/>
+<img class="img-thumbnail center-block" src="conflicts/merge-tool.png"/>
 
 
 The blue changes are non-conflicting and can be merged automatically. The red ones are conflicting and we must fix them.
 
 
-<img class="img-thumbnail center-block" src="merge-tool-2.png"/>
+<img class="img-thumbnail center-block" src="conflicts/merge-tool-2.png"/>
 
 
 <div class="alert alert-warning"><strong>Hint:</strong>The first thing we have to do is to press the <span class="label label-info">Copy all non-conflicting changes</span> button from top-right area of the merge tool view. This will automatically merge all the non-conflicting changes.</div>
@@ -51,7 +51,7 @@ After that, all you have to do is to modify the conflicting method in the desire
 
 A particular type of conflict occurs when you try to modify a file that was deleted on the other branch. In this case, it is mandatory to talk with the person who removed it and to figure out where to put your code instead. This also applies if you delete a file and another user tries to modify it.
 
-<img class="img-thumbnail center-block" src="merge-tool-3.png"/>
+<img class="img-thumbnail center-block" src="conflicts/merge-tool-3.png"/>
 
 After you fixed the conflict, you have to save the file, return to the **Git Staging View** and drag and drop the conflicting file to the **Staged Changes** category. Then you can finally make your commit.
 
