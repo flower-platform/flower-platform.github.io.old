@@ -48,7 +48,7 @@ If we debug a class in Java we can make changes to it without restarting JVM (*e
 
 #### <br>Configuring TomCat Server
 
-To see how to configure TomCat Server search [here](../WTP.html#hot_code_swap)
+To see how to configure TomCat Server search [here](./WTP.html#hot_code_swap)
 
 
 
