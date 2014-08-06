@@ -25,7 +25,7 @@ Git will tell you that you have conflicts, and will also tell you that you have 
 
 <div class="alert alert-warning">The conflicting files appear in the <strong>Unstaged Changes</strong> section. Note that they have a red bullet on their icon.</div>
 
-<img class="img-thumbnail center-block" src="conflicts.png"/>
+<img class="img-thumbnail center-block" src="conflicts/conflicts.png"/>
 
 
 #How we fix conflicts?
