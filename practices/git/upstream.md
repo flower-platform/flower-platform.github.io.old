@@ -17,7 +17,9 @@ share: true
 
 <!-- more -->
 
-When creating a new branch (as indicated [here](../#Branchmanagement)) based on a **remote tracking branch** (which is mostly the common way of creating a branch), one of the already checked options is **Configure upstream for push and pull**. But what does this mean? It means that given the fact that every _remote tracking branch_ is associated with a _remote_ and this _remote_ contains the information required to access the corresponding _remote repository_, there is the possibility of automatically creating the upstream configuration while creating the new local branch. In the following example, we created a new branch called _test-branch_ starting from _origin/1_3_x_collaboration_ remote branch. 
+When creating a new branch (as indicated [here](./#Branchmanagement)) based on a **remote tracking branch** (which is mostly the common way of creating a branch), one of the already checked options is **Configure upstream for push and pull**. 
+
+**But what does this mean?** It means that given the fact that every _remote tracking branch_ is associated with a _remote_ and this _remote_ contains the information required to access the corresponding _remote repository_, there is the possibility of automatically creating the upstream configuration while creating the new local branch. In the following example, we created a new branch called _test-branch_ starting from _origin/1_3_x_collaboration_ remote branch. 
 
 <img class="img-thumbnail center-block" src="upstream-images/upstream_create_branch.png"/> 
 

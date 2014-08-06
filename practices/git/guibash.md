@@ -15,4 +15,4 @@ Sometimes not all merges can be done using Eclipse's **Git** perspective, in whi
 
 <div style="text-align:center;"><img class="img-thumbnail" src="guibash-images/git_gui.png"/><img class="img-thumbnail" src="guibash-images/git_bash.png" width="600"/></div><br>
 
-It is up to you which one to use and when. For example, one of the cases when we use Git GUI is when using the **Prune** command. Details about this command can be found [here](../branch-management.html). 
+It is up to you which one to use and when. For example, one of the cases when we use Git GUI is when using the **Prune** command. Details about this command can be found [here](../git/#Branchmanagement). 

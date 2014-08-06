@@ -48,7 +48,7 @@ A wizard will appear, which will guide you through the rest of the process. From
 
 ### <a name="running_the_server"></a> Running the server
 
-As also mentioned [here](../../dev-doc/setup-dev-environment.html) in the _Starting the server_ area, we recommend to start the server in **Debug** mode. This can be done either by:
+As also mentioned [here](../dev-doc/setup-dev-environment.html) in the _Starting the server_ area, we recommend to start the server in **Debug** mode. This can be done either by:
 
 * clicking on the **Debug** option from the top bar and then choosing _Tomcat v7.0 Server on localhost_
 	<img class="img-thumbnail center-block" src="wtp-images/debug_server_1.png"/> 
@@ -59,12 +59,12 @@ As also mentioned [here](../../dev-doc/setup-dev-environment.html) in the _Start
 	<img class="img-thumbnail center-block" src="wtp-images/debug_server_2.png"/> 
 
 <div markdown="1" class="alert alert-info">
-**HINT.** A useful configuration that we use is to set the IDE to **launch the previously launched application** (details about the steps needed to achieve this are given [here](TODO)). In this way, we can press **F11** and run the application in **Debug** mode directly. 
+**HINT.** A useful configuration that we use is to set the IDE to **launch the previously launched application** (details about the steps needed to achieve this are given [here](./configure-workspace.html#always)). In this way, we can press **F11** and run the application in **Debug** mode directly. 
 </div>
 
 ### <a name="hot_code_swap"></a> Hot Code Swap
 
-In order to take advantage of the _Hot Code Swap_ technique (described in details [here](TODO)), we must first configure the server not to reload itself automatically when changes are made in the code. For that, we perform the following steps:
+In order to take advantage of the _Hot Code Swap_ technique (described in details [here](./#DisplayViewHotCodeReplace)), we must first configure the server not to reload itself automatically when changes are made in the code. For that, we perform the following steps:
 
 1. go to the **Servers** view
 2. double-click on the server (**Tomcat** in our case)
