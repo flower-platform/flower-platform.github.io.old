@@ -120,7 +120,7 @@ Displaying line numbers can be very useful for debugging code errors.
 
 We can do this in two ways: 
 
-* We can either right click in the right side of our code and select **Show line numbers** 
+* We can either right click in the left side of our code and select **Show line numbers** 
 
 <img class="img-thumbnail center-block" src="show-line-numbers-1.PNG"/>
 
