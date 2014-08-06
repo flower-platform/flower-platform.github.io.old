@@ -14,7 +14,11 @@ share: true
 ---
 {% include JB/setup %}
 
-In order to configure the workspace, we can do several things like:
+After a successful installation of Eclipse, it is recommended to us to configure our workspace. By doing this, we simplify the way we use Eclipse. We can set as we prefer several options like <span class="label label-success">showing heap</span>, <span class="label label-success">setting the maximum line width</span>, <span class="label label-success">set Eclipse to always launch the previously launched application</span>, <span class="label label-success">adding author to our classes</span>, <span class="label label-success">showing line numbers</span> or <span class="label label-success">formatting our code</span>.   
+
+<!-- more -->
+
+As we said before, in order to configure the workspace, we can do several things like:
 <ul> 
 <li> <a href="#showHeap">Show heap</a> </li>
 <li> <a href="#setLineWidth">Set line width</a> </li>
@@ -23,8 +27,6 @@ In order to configure the workspace, we can do several things like:
 <li> <a href="#showLineNumbers"> Show line numbers</a>  </li>
 <li> <a href="#formatText"> Format Text</a>  </li>
 </ul>
-
-<!-- more -->
 
 <a name="showHeap"/>
 
