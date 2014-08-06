@@ -33,7 +33,7 @@ share: true
 
 <img class="img-thumbnail center-block" src="debug-images/breakpoints.png"/>
 
-We can *uncheck* the **breapoints** we want to skip or to **skip all**:
+We can *clear* the **breakpoints** that we want to skip or to **skip them all**:
 
 <img class="img-thumbnail center-block" src="debug-images/skip-breakpoints.png"/>
 

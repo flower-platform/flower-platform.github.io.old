@@ -18,6 +18,7 @@ After a successful installation of Eclipse, it is recommended to us to configure
 
 <!-- more -->
 
+
 As we said before, in order to configure the workspace, we can do several things like:
 <ul> 
 <li> <a href="#showHeap">Show heap</a> </li>
@@ -42,7 +43,7 @@ In the menu *Window / Preferences / General* we check the box afferent to **"Sho
 
 <img class="img-thumbnail center-block" src="configure-workspace-images/show-heap-status.png"/>
 
-<div class="alert alert-info"><strong>Hint:</strong> Once you open the window, you can use the keyboard: <span class="label label-success">ARROW KEYS</span>, <span class="label label-success">SPACE</span> and then <span class="label label-success">ENTER</span>.</div>
+<div class="alert alert-info"><strong>Hint:</strong> Once the window is opened, we can use the keyboard: <span class="label label-success">ARROW KEYS</span>, <span class="label label-success">SPACE</span> and then <span class="label label-success">ENTER</span>.</div>
 
 Now the status of the heap can be seen in the lower right corner. The left part shows how much heap is used and the right part shows how much heap is available. We can also see the maximum size of the heap. There is also an icon which allows us to run the garbage collector manually.
 
@@ -59,7 +60,7 @@ The only line we have to modify is the one starting with **-xmx**  (e.g. changin
 
 ### Why?
 
-We can modify the default line width in Eclipse so the code can be formatted the way you want ( e.g. ``if a method has a long declaration, it can be split in two or many lines and we may want to see it in only one - see the pictures below``).
+We can modify the default line width in Eclipse so the code can be formatted the way we want ( e.g. ``if a method has a long declaration, it can be split in two or many lines and we may want to see it in only one - see the pictures below``).
 
 <img class="img-thumbnail center-block" src="configure-workspace-images/80.PNG"/> <span class="label label-warning">Line width: 80</span>
 <img class="img-thumbnail center-block" src="configure-workspace-images/180.PNG"/> <span class="label label-warning">Line width: 180</span>
@@ -88,7 +89,7 @@ In the menu *Window / Preferences / Run/Debug / Launching* we have to check the 
 
 <img class="img-thumbnail center-block" src="configure-workspace-images/always-launch.PNG"/>
 
-We can now use <span class="label label-success">CTRL + F11</span> or <span class="label label-success">F11</span> without worry.
+We can now use <span class="label label-success">CTRL + F11</span> or <span class="label label-success">F11</span> to debug or run the project without worry.
 
 <a name="addAuthor"/>
 
