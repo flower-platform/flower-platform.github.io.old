@@ -122,7 +122,7 @@ We can do this in two ways:
 
 * We can either right click in the left side of our code and select **Show line numbers** 
 
-<img class="img-thumbnail center-block" src="show-line-numbers-1.PNG"/>
+<img class="img-thumbnail center-block" src="configure-workspace-images/show-line-numbers-1.PNG"/>
 
 * Or we can go to the menu *Windows / Preferences / General / Editors / Text* Editors and check the option **Show line numbers**
 
