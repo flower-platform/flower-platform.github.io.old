@@ -86,7 +86,7 @@ We need this step so that we can force Eclipse to write some config files for us
 
 ### Starting the Server
 
-The entry point of Flower Platform is ``org.flowerplatform.host.web_app``. Being a web project (WTP) we should launch it as a **web project**. More info about configuring, launching and working with web projects is found [here](TODO).
+The entry point of Flower Platform is ``org.flowerplatform.host.web_app``. Being a web project (WTP) we should launch it as a **web project**. More info about configuring, launching and working with web projects is found [here](../eclipse-productivity/WTP.html).
 
 We recommend to always start the server in **Debug** mode, and take advantage of the **hot code swap** technique (cf. [this doc](TODO)), in order to be productive when writing and modifying Java code.
 
