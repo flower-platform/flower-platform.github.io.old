@@ -26,6 +26,18 @@ Usage:
   	{% endif %}
   {% endfor %}
   
+  {% assign url_to_remove = '' %}  
+  {% if page.id %}
+	  {% assign sub_page_url_part = page.url | remove: '/index.html' | split: '/' | last %}
+	  {% assign url_to_remove = '/' | append: sub_page_url_part | append: '/index.html' %}{% assign sub_page_url_part = nil %}
+  {% elsif page.parent-id %}
+	  {% assign sub_page_url_part = page.url | split: '/' | last %}
+	  {% assign sub_page_url_part = '/' | append: sub_page_url_part %}
+	  {% assign sub_page_url_part_2 = page.url | remove: sub_page_url_part | split: '/' | last %}
+	  {% assign url_to_remove = '/' | append: sub_page_url_part_2 | append: sub_page_url_part %}{% assign sub_page_url_part = nil %}{% assign sub_page_url_part_2 = nil %}
+  {% endif %}
+ {% assign sub_page_extension_url = page.url | remove: url_to_remove %}
+  
   {% for node in pages_list %}
 	{% assign url_parts = node.url | remove: '/index.html' | split: '/' %}
 	{% assign file = url_parts | last %}
@@ -36,9 +48,15 @@ Usage:
 		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
 		{% assign navigation_file = navigation_file | append:'|' | append:file %}
 	{% endif %}
-	{% if site.custom_settings.extensions.active == true and node.extensions-home == true %}{% assign extensions_node = node %}{% endif %}
+	{% if site.custom_settings.extensions.active == true and node.extensions-home == true %}
+		{% assign extension_node_fake = node %}
+		{% assign extension_url = node.url | remove: '/index.html' %}
+		{% if sub_page_extension_url == extension_url %}{% assign extensions_node = node %}{% endif %}
+	{% endif %}
   {% endfor %}
   
+  {% unless extensions_node %}{% assign extensions_node = extension_node_fake %} {% endunless %}
+
   {% if site.custom_settings.extensions.active == true && extensions_node %}
 	{% assign extensions_file = extensions_node.url | remove: '/index.html' | split: '/' | last %}
 	{% assign extensions_first = extensions_node.order | split: ' ' | first %}
