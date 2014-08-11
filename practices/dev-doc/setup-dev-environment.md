@@ -72,7 +72,7 @@ E.g. **from Flash Builder:**
 
 We open ``/org.flowerplatform.product/eclipse-4.3.2.target`` and we click *Set as Target Platform* (upper right corner). This operation will download the proper Eclipse plugins needed by Flower Platform.
 
-### Rare Operation: Run the ``flowerplatform.product`` file
+### <a name="product-run"></a>Rare Operation: Run the ``flowerplatform.product`` file
 
 The **first time** or when the **set of plugins change** (e.g. after adding a new project), we open ``/org.flowerplatform.product/flowerplatform.product`` and we **run** it (upper right corner, the green play button. 
 
