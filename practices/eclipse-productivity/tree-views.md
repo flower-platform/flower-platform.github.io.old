@@ -47,7 +47,7 @@ To *enable or disable* filters, we complete the following **steps**:
 	
 **Navigator** view provides a hierarchical view of the resources in the Workbench including **hidden files**, which *Project and Package Explorer* do not show.
 	
-*Navigator*, like the *Package Explorer*, it has the same ``filtering`` option with the same **steps**.
+*Navigator*, like the *Package Explorer*, it has the same ``filtering`` option and the **steps** for activate/deactivate are the same.
 
 <div class="alert alert-warning" role="alert">
 <strong>Warning!</strong> It is recommended the <font color="red"><i>removal of all filters</i></font> in the Navigator to display all files on the disc. </div>

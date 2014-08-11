@@ -22,7 +22,6 @@ share: true
 <div class="alert alert-warning" role="alert">
 <strong>Warning!</strong> It is recommended to <font color="red"><i>write formatted code</i></font>.</div>
 
-
 ## How?
 
 We have an ``unformatted`` source code file:
