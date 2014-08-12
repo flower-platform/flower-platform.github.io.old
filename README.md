@@ -35,6 +35,12 @@ In order to see the site locally, go to the repo root and type:
 ```
 jekyll serve --watch
 ```
+or
+```
+bundle exec jekyll serve --watch
+```
+
+One of the above commands should work. On my system the first one works but not the second ones. For some of my colleagues it's the opposite. I didn't dig to see what's happening. 
 
 The site should now be available at [http://localhost:4000](http://localhost:4000).
 
