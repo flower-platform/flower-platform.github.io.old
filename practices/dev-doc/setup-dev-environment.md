@@ -73,7 +73,7 @@ E.g. **from Flash Builder:**
 
 We open ``/org.flowerplatform.product/eclipse-4.3.2.target`` and we click *Set as Target Platform* (upper right corner). This operation will download the proper Eclipse plugins needed by Flower Platform.
 
-### Rare Operation: Run the ``flowerplatform.product`` file
+### <a name="product-run"></a>Rare Operation: Run the ``flowerplatform.product`` file
 
 The **first time** or when the **set of plugins change** (e.g. after adding a new project), we open ``/org.flowerplatform.product/flowerplatform.product`` and we **run** it (upper right corner, the green play button. 
 
@@ -87,7 +87,7 @@ We need this step so that we can force Eclipse to write some config files for us
 
 ### Starting the Server
 
-The entry point of Flower Platform is ``org.flowerplatform.host.web_app``. Being a web project (WTP) we should launch it as a **web project**. More info about configuring, launching and working with web projects is found [here](TODO).
+The entry point of Flower Platform is ``org.flowerplatform.host.web_app``. Being a web project (WTP) we should launch it as a **web project**. More info about configuring, launching and working with web projects is found [here](../eclipse-productivity/WTP.html).
 
 We recommend to always start the server in **Debug** mode, and take advantage of the **hot code swap** technique (cf. [this doc](TODO)), in order to be productive when writing and modifying Java code.
 
