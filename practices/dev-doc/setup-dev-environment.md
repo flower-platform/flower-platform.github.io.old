@@ -31,6 +31,7 @@ We use Eclipse together with a few plugins. If we are starting from scratch, the
 * **Web Tools Platform** (WTP, for working with web applications): We usually install these plugins the "old" way. I.e. [download](http://download.eclipse.org/webtools/downloads/) the version corresponding to our version of Eclipse (e.g. latest version / *Traditional Zip Files* / *Tool Developers*), unzip, and copy the ``features`` and ``plugins`` dirs into Eclipse (e.g. ``D:\Java\eclipse_4.3.1_modeling_x64``).
 * **m2e** (Maven integration with Eclipse): We install these plugins the "new" way (i.e. *Help / Install New Software... / click Add...*, cf. [using an update site](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-127.htm)). We use ``http://download.eclipse.org/technology/m2e/releases `` as update site (cf. [these m2e instructions](https://www.eclipse.org/m2e/download/)). Make sure that *Contact all update sites ...* is checked.
 * **Ansi Console** (for seeing color log messages in the Eclipse console): We use the update site: ``http://www.mihai-nita.net/eclipse`` (cf. [here](http://mihai-nita.net/java/)).
+* **Checkstyle:**(static code analysis tool used for checking if Java source code complies with a specific set of coding rules). We install it from Eclipse Marketplace (i.e. *Help / Eclipse Marketplace / search for checkstyle / checkstyle Plugin*).
 
 ## Flex Development: SDK
 
