@@ -29,6 +29,9 @@ share: true
 	
 <img class="img-thumbnail center-block" src="debug-images/breakpoint.png"/>
 
+<div class="alert alert-info">A breakpoint is <strong>installed</strong> if the class has been loaded in the target VM and a breakpoint request has been successfully created at the desired location. If so, a <strong>checkmark</strong> will appear on the breakpoint</div>
+
+
 **The Breakpoints view** allows us to delete and deactivate stop points, i.e. ``breakpoints and watchpoints`` and to modify their *properties*. 
 
 <img class="img-thumbnail center-block" src="debug-images/breakpoints.png"/>
@@ -90,6 +93,7 @@ We can use the <span class="label label-success">F5</span>, <span class="label l
 
 <h4><span class="label label-warning"><b><font size="3">Warning: </font></b>Remote debugging requires that we have the project which is debugged, available in our Eclipse. </span></h4><br>
 
+<div class="alert alert-danger">When remote debugging, you must pay attention to the situations when a different process is being launched (e.g. Tomcat server launches Hudson continuous integration tool, which launches an Ant build script wich launches Maven). In that case, you  must specify the debug options to Maven: add the <strong>Xdebug</strong> and <strong>Xrunjdwp:transport=dt_socket,server=y,address=5001,suspend=y</strong> parameters to Maven in your build script. Then you can debug the application using the 5001 port.</div>
 ##For more setup see:
 
 * [Setup Development Environment](../dev-doc/#SetupDevelopmentEnvironment)
